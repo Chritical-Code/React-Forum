@@ -1,16 +1,14 @@
-import Header from "@/src/components/header";
+import Header from "@/src/components/Header";
 
 import "./globals.css";
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>){
     return(
         <html lang="en">
-            <body>
+            <body className="flex flex-col w-screen h-screen overflow-hidden">
                 <Header></Header>
 
-                <div className="w-screen min-h-screen bg-pink-50">
-                    {children}
-                </div>
+                {children}
             </body>
         </html>
     );
