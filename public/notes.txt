@@ -1,0 +1,32 @@
+Nows
+-Accounts
+-profile pages
+
+
+To Do
++Accounts
+-account
+-profile page
+-likes
+
++Browse
+-links
+-search
+-tags
+-load more posts dynamically
+-algorithm
+-filters
+
++Posts
+-title
+-text
+-picture/video
+-comments
+-rating
+-link to profile
+
++Settings
+-theme
+
++Improve design
+-maybe look at some templates idk

@@ -1,6 +1,6 @@
 export default function Home() {
 return (
-    <div className="flex flex-row overflow-hidden bg-pink-50">
+    <div className="flex flex-row overflow-hidden">
         <div className="flex flex-col w-1/5">
             <p className="font-bold m-1">Tags</p>
             <Tag text="One"></Tag>
