@@ -1,9 +1,12 @@
-Nows
+Nows:
+
++Develop
 -Accounts
 -profile pages
 
 
-To Do
+
+Future:
 +Accounts
 -account
 -profile page
