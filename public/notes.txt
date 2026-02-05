@@ -1,15 +1,12 @@
 Nows:
 
 +accounts
--switch to better auth
--delete old nextauth
--register a github sign in
--show username once
+-research how the database integrates
 -research database options (probably run locally)
 -design database
 -make database
 -integrate database with authentication
--make like a post show up
+-make posts show up
 -add more providers if able
 
 

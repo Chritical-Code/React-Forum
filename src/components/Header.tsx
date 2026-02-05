@@ -23,7 +23,6 @@ export default function Header(){
             <div className="flex w-1/4 items-center justify-end">
                 <HeaderUsername />
                 <HeaderButton link="/" text="⚙" />
-                <HeaderButton link="/user/bob" text="☺" />
             </div>
         </div>
     );
