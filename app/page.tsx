@@ -24,7 +24,7 @@ return (
 
 function Post(){
     return(
-        <div className="shrink-0 bg-amber-400 w-2xl h-96 border m-2"></div>
+        <div className="shrink-0 bg-gray-400 w-2xl h-96 border m-2"></div>
     );
 }
 

@@ -1,13 +1,20 @@
 Nows:
 
-+Develop
--Accounts
--profile pages
-
++accounts
+-switch to better auth
+-delete old nextauth
+-register a github sign in
+-show username once
+-research database options (probably run locally)
+-design database
+-make database
+-integrate database with authentication
+-make like a post show up
+-add more providers if able
 
 
 Future:
-+Accounts
++User
 -account
 -profile page
 -likes
