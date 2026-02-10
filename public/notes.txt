@@ -1,8 +1,7 @@
 Nows:
 
 +accounts
--research how the database integrates
--research database options (probably run locally)
+-setup database
 -design database
 -make database
 -integrate database with authentication
