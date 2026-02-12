@@ -1,10 +1,7 @@
 Nows:
 
 +accounts
--setup database
--design database
--make database
--integrate database with authentication
+-add post to database
 -make posts show up
 -add more providers if able
 
