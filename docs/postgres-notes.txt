@@ -1,0 +1,33 @@
+-----------------------------------------------
+bash commands
+-----------------------------------------------
+switch to the postgres user.
+sudo su - postgres
+
+check postgres status
+sudo systemctl status postgresql
+
+config located at
+cd /etc/postgresql/16/main/
+
+-----------------------------------------------
+interactive shell commands
+-----------------------------------------------
+either format these commands like
+sudo -u postgres psql -c "\l"
+
+or open interactive shell with
+psql
+
+show ip and port
+SHOW listen_addresses;
+SHOW port;
+
+list databases
+\l
+
+connect to database
+\c name
+
+list tables
+\dt

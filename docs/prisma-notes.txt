@@ -1,0 +1,9 @@
+--------------------------------
+After making changes to the database, you'll need to migrate.
+
+npx prisma migrate dev
+
+----------------------------------
+After making even trivial changes or updates, you need to generate a new client file.
+
+npx prisma generate
