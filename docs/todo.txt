@@ -1,17 +1,18 @@
 Nows:
 
-+accounts
--look up how posts are made
--create example post using code
--make posts show up
--add post editor
--add more providers if able
++Post editor
+-read about nextjs forms
+-make a mockup
+-plug it in with prisma
+
++Post viewer
+-show basic post data
+-figure out media/images/vids
 
 
 Future:
 +User
--account
--profile page
+-add more providers
 -likes
 
 +Browse

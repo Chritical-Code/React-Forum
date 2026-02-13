@@ -1,10 +1,17 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import {getServerSession} from "next-auth";
+import {authOptions} from "@/app/api/auth/[...nextauth]/route";
+import {prisma} from "@/prisma/prisma";
 
 export default async function DashboardPage() {
     const session = await getServerSession(authOptions);
 
     if(session){
+        const user = await prisma.user.findUnique({
+            where: {
+                id: session.user?.id,
+            }
+        });
+
         return (
             <div className="flex flex-col items-center">
                 <h1 className="font-bold m2">Profile</h1>
@@ -16,6 +23,7 @@ export default async function DashboardPage() {
                     href="/api/auth/signout">
                     Sign out
                 </a>
+                <p>{JSON.stringify(user, null, 2)}</p>
             </div>
         );
     }
