@@ -1,8 +1,10 @@
 Nows:
 
 +accounts
--add post to database
+-look up how posts are made
+-create example post using code
 -make posts show up
+-add post editor
 -add more providers if able
 
 
