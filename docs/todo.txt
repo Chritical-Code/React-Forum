@@ -1,13 +1,13 @@
 Nows:
 
-+Post editor
--read about nextjs forms
--make a mockup
--plug it in with prisma
-
-+Post viewer
--show basic post data
++Posts
+-find out how nextjs forms work
+-create a form with the proper fields
+-apply the form data to create post function
 -figure out media/images/vids
+-slightly polish look and feel of viewer
+-slightly polish look and feel of editor
+-implement post preview cards on browse page
 
 
 Future:
@@ -30,6 +30,7 @@ Future:
 -comments
 -rating
 -link to profile
+-validation: The satisfies Operator
 
 +Settings
 -theme

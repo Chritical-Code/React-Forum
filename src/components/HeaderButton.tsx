@@ -8,7 +8,7 @@ type HeaderButtonProps = {
 
 export default function HeaderButton({text, link}: HeaderButtonProps){
     return(
-        <Link href={link} className="flex items-center justify-center shrink-0 m-1 border h-8 w-10 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer">
+        <Link href={link} className="btn h-8 w-10">
             {text}
         </Link>
     );

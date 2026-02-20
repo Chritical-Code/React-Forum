@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer components{
+    .btn{
+        @apply flex items-center justify-center shrink-0 m-1 border h-8 w-8 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer;
+    }
+}
