@@ -1,4 +1,5 @@
 import {makePost} from "@/src/actions/make-a-post";
+import Form from 'next/form'
 
 type EditPostProps = {
     params: Promise<{
@@ -12,31 +13,21 @@ export default async function EditPost({params}: EditPostProps){
     return(
         <div className="flex flex-col items-center text-center w-full">
             <p>Edit post: {resolved.postId}</p>
-            {/*<CreatePost />*/}
             <PostForm />
         </div>
     );
 }
 
-function CreatePost(){
-    'use client';
-    
-    return(
-        <button className="btn" 
-        onClick={makePost}>Make</button>
-    );
-}
-
 function PostForm(){
     return(
-        <form action={makePost} className="flex flex-col items-center w-full">
+        <Form action={makePost} className="flex flex-col items-center w-full">
             <p>Title</p>
-            <input type="text" className="border w-1/5"></input>
+            <input type="text" name="title" className="border w-1/5"></input>
 
             <p>Text</p>
-            <textarea className="border w-2/5"></textarea>
+            <textarea name="text" className="border w-2/5"></textarea>
 
             <button type="submit" className="btn w-16">Submit</button>
-        </form>
+        </Form>
     );
 }
