@@ -1,6 +1,7 @@
 Nows:
 
 +Posts
+-delete button
 -figure out media/images/vids
 -design view
 -design edit

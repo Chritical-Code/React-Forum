@@ -3,6 +3,7 @@ import Form from 'next/form'
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import {prisma} from "@/prisma/prisma";
+import {deletePost} from "@/src/actions/deletePost";
 
 type EditPostProps = {
     params: Promise<{
@@ -25,6 +26,11 @@ export default async function EditPost({params}: EditPostProps){
             <div className="flex flex-col items-center text-center w-full">
                 <p>Edit post: {resolved.postId}</p>
                 <PostForm inTitle={post.title} inText={post.text} postID={resolved.postId} />
+
+                <Form action={deletePost}>
+                    <input type="hidden" name="postId" value={resolved.postId}></input>
+                    <button type="submit" className="btn bg-red-500 w-16">Delete</button>
+                </Form>
             </div>
         );
     }
