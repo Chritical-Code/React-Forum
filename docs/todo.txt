@@ -1,9 +1,10 @@
 Nows:
++debug
+-errors when trying to update a post
 
 +Posts
--make edit posts link properly to post.id (with user validation)
--make a create post button on profile page (makes a new post and takes you to edit)
--enable the user to see and edit their own posts (edit post button on each post??)
+-add new post button to profile
+-show users posts for editing on user page
 -figure out media/images/vids
 -design view
 -design edit
