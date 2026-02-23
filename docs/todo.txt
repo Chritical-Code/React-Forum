@@ -1,17 +1,17 @@
 Nows:
-+debug
--errors when trying to update a post
 
 +Posts
--add new post button to profile
--show users posts for editing on user page
 -figure out media/images/vids
 -design view
 -design edit
 -design post boxes
+-desing user page
 
 
 Future:
++misc
+-more universal button class stuff (maybe it should be a component? idk)
+
 +User
 -add more providers
 -likes

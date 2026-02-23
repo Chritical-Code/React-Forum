@@ -56,7 +56,7 @@ function PostForm({inTitle, inText, postID}: PostFormProps){
 
             <input type="hidden" name="postId" value={postID}></input>
 
-            <button type="submit" className="btn w-16">Submit</button>
+            <button type="submit" className="btn w-16 bg-gray-200 hover:bg-gray-100">Submit</button>
         </Form>
     );
 }

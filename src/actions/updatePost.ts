@@ -10,7 +10,7 @@ export async function updatePost(formData: FormData){
 
     const title = String(formData.get("title") ?? "");
     const text = String(formData.get("text") ?? "");
-    const postId = String(formData.get("postID") ?? "");
+    const postId = String(formData.get("postId") ?? "");
 
     const post = await prisma.post.update({
         where: {id: postId, authorId: session?.user.id},

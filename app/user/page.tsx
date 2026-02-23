@@ -2,6 +2,8 @@ import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import {prisma} from "@/prisma/prisma";
 import { Post } from "@/src/generated/prisma/client";
+import Form from 'next/form'
+import {newPost} from "@/src/actions/newPost";
 
 export default async function DashboardPage() {
     const session = await getServerSession(authOptions);
@@ -33,6 +35,10 @@ export default async function DashboardPage() {
                 <a className="btn h-12 w-20 bg-gray-200 hover:bg-gray-100" href="/api/auth/signout">
                     Sign out
                 </a>
+
+                <Form action={newPost} className="">
+                    <button type="submit" className="btn h-12 w-20 bg-gray-200 hover:bg-gray-100">New Post</button>
+                </Form>
 
                 <div className="flex flex-col w-3/5 items-center">
                     {postBoxes}
