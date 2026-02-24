@@ -29,7 +29,7 @@ export default async function EditPost({params}: EditPostProps){
 
                 <Form action={deletePost}>
                     <input type="hidden" name="postId" value={resolved.postId}></input>
-                    <button type="submit" className="btn bg-red-500 w-16">Delete</button>
+                    <button type="submit" className="btn bg-red-500">Delete</button>
                 </Form>
             </div>
         );
@@ -62,7 +62,7 @@ function PostForm({inTitle, inText, postID}: PostFormProps){
 
             <input type="hidden" name="postId" value={postID}></input>
 
-            <button type="submit" className="btn w-16 bg-gray-200 hover:bg-gray-100">Submit</button>
+            <button type="submit" className="btn">Submit</button>
         </Form>
     );
 }

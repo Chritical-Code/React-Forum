@@ -2,6 +2,8 @@
 
 @layer components{
     .btn{
-        @apply flex items-center justify-center shrink-0 m-1 border h-8 w-8 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer;
+        @apply flex items-center justify-center shrink-0 m-1 border h-12 w-20 
+        bg-gray-200 hover:bg-gray-100 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer
+        active:bg-gray-50 active:border-gray-500 active:text-gray-500;
     }
 }

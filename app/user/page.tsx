@@ -32,12 +32,12 @@ export default async function DashboardPage() {
                 <img className="w-20 h-20 m2" src={session?.user?.image ?? ""}></img>
                 <p className="m2">{session?.user?.name}</p>
                 <p className="m2">{session?.user?.email}</p>
-                <a className="btn h-12 w-20 bg-gray-200 hover:bg-gray-100" href="/api/auth/signout">
+                <a className="btn" href="/api/auth/signout">
                     Sign out
                 </a>
 
                 <Form action={newPost} className="">
-                    <button type="submit" className="btn h-12 w-20 bg-gray-200 hover:bg-gray-100">New Post</button>
+                    <button type="submit" className="btn">New Post</button>
                 </Form>
 
                 <div className="flex flex-col w-3/5 items-center">
