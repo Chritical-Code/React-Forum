@@ -36,7 +36,7 @@ export default async function EditPost({params}: EditPostProps){
 
                 <Form action={uploadMedia} className="flex">
                     <input type="hidden" value={resolved.postId}></input>
-                    <input type="file" className="btnf" accept="image/*"></input>
+                    <input type="file" name="image" className="btnf" accept="image/*"></input>
                     <button type="submit" className="btn">Upload</button>
                 </Form>
 
