@@ -1,6 +1,12 @@
 Nows:
-+btn
--more universal button class stuff (maybe it should be a component? idk)
+
++media
+-copy upload method from web
+-look up sharp stuff
+-implement sharp stuff
+-add video uploading (mime types if statement)
+-look up ffmpeg
+-implement ffmpeg
 
 +Posts
 -figure out media/images/vids

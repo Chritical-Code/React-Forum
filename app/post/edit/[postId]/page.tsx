@@ -4,6 +4,8 @@ import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import {prisma} from "@/prisma/prisma";
 import {deletePost} from "@/src/actions/deletePost";
+import { uploadMedia } from "@/src/actions/uploadMedia";
+import MyImg from "@/src/components/MyImg";
 
 type EditPostProps = {
     params: Promise<{
@@ -25,6 +27,19 @@ export default async function EditPost({params}: EditPostProps){
         return(
             <div className="flex flex-col items-center text-center w-full">
                 <p>Edit post: {resolved.postId}</p>
+
+                <div className="flex flex-col w-120 h-80 overflow-y-scroll overflow-x-hidden">
+                    <MyImg></MyImg>
+                    <MyImg></MyImg>
+                    <MyImg></MyImg>
+                </div>
+
+                <Form action={uploadMedia} className="flex">
+                    <input type="hidden" value={resolved.postId}></input>
+                    <input type="file" className="btnf" accept="image/*"></input>
+                    <button type="submit" className="btn">Upload</button>
+                </Form>
+
                 <PostForm inTitle={post.title} inText={post.text} postID={resolved.postId} />
 
                 <Form action={deletePost}>

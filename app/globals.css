@@ -2,8 +2,16 @@
 
 @layer components{
     .btn{
-        @apply flex items-center justify-center shrink-0 m-1 border h-12 w-20 
+        @apply flex items-center justify-center shrink-0 m-1 border h-10 w-20 
         bg-gray-200 hover:bg-gray-100 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer
         active:bg-gray-50 active:border-gray-500 active:text-gray-500;
+    }
+}
+
+@layer components{
+    .btnf{
+        @apply file:shrink-0 file:m-1 file:border file:h-10 file:w-20 
+        file:bg-gray-200 file:hover:bg-gray-100 file:hover:border-gray-600 file:hover:text-gray-600 file:hover:cursor-pointer
+        file:active:bg-gray-50 file:active:border-gray-500 file:active:text-gray-500;
     }
 }
