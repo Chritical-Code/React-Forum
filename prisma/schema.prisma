@@ -91,6 +91,16 @@ model Post {
   updatedAt DateTime  @updatedAt
 
   //relations
-  author    User @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  authorId  String
+  author      User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId    String
+  postImages  PostImage[]
+}
+
+model PostImage {
+  id        String @id @default(cuid())
+  src       String
+
+  //relations
+  post    Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId  String
 }

@@ -1,7 +1,7 @@
 Nows:
 
 +media
--file naming
+-file naming: user based folders
 -tie into database
 -add delete button
 -add video uploading (mime types if statement)
@@ -22,6 +22,7 @@ Future:
 -confirm delete post
 -save edit does upload too
 -consider doing actual validation instead of letting errors fly
+-image resizer
 
 +User
 -add more providers
