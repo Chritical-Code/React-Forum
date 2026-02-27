@@ -1,9 +1,9 @@
 Nows:
 
 +media
--copy upload method from web
--look up sharp stuff
--implement sharp stuff
+-file naming
+-tie into database
+-add delete button
 -add video uploading (mime types if statement)
 -look up ffmpeg
 -implement ffmpeg
@@ -18,6 +18,10 @@ Nows:
 
 Future:
 +misc
+-confirm delete image
+-confirm delete post
+-save edit does upload too
+-consider doing actual validation instead of letting errors fly
 
 +User
 -add more providers

@@ -28,7 +28,7 @@ export default async function EditPost({params}: EditPostProps){
             <div className="flex flex-col items-center text-center w-full">
                 <p>Edit post: {resolved.postId}</p>
 
-                <div className="flex flex-col w-120 h-80 overflow-y-scroll overflow-x-hidden">
+                <div className="flex flex-col w-120 h-80 overflow-y-scroll overflow-x-hidden border">
                     <MyImg></MyImg>
                     <MyImg></MyImg>
                     <MyImg></MyImg>
@@ -36,7 +36,7 @@ export default async function EditPost({params}: EditPostProps){
 
                 <Form action={uploadMedia} className="flex">
                     <input type="hidden" value={resolved.postId}></input>
-                    <input type="file" name="image" className="btnf" accept="image/*"></input>
+                    <input type="file" name="image" className="btnf" ></input>
                     <button type="submit" className="btn">Upload</button>
                 </Form>
 
@@ -44,7 +44,7 @@ export default async function EditPost({params}: EditPostProps){
 
                 <Form action={deletePost}>
                     <input type="hidden" name="postId" value={resolved.postId}></input>
-                    <button type="submit" className="btn bg-red-500">Delete</button>
+                    <button type="submit" className="btn bg-red-700">Delete</button>
                 </Form>
             </div>
         );
@@ -77,7 +77,7 @@ function PostForm({inTitle, inText, postID}: PostFormProps){
 
             <input type="hidden" name="postId" value={postID}></input>
 
-            <button type="submit" className="btn">Submit</button>
+            <button type="submit" className="btn">Save</button>
         </Form>
     );
 }
