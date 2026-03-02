@@ -1,8 +1,8 @@
 Nows:
 
 +media
+-make image delete button delete actual file too
 -reload images after uploading (perhaps our first use of state?)
--make delete button work
 -add video uploading (mime types if statement)
 -look up ffmpeg
 -implement ffmpeg
@@ -17,7 +17,7 @@ Nows:
 
 Future:
 +misc
--image scroller component (takes inputs, fills them in, trash setting probably)
+-universal image scroller component (takes inputs, fills them in, trash setting probably)
 -confirm delete image
 -confirm delete post
 -save edit does upload too
