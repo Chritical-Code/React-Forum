@@ -1,7 +1,7 @@
 Nows:
 
 +media
--show correct media per post
+-show image on postbox
 -make delete button work
 -add video uploading (mime types if statement)
 -look up ffmpeg
@@ -17,6 +17,8 @@ Nows:
 
 Future:
 +misc
+-image scroller component (takes inputs, fills them in, trash setting probably)
+-postbox component (can be configured for view or edit, probably with links)
 -confirm delete image
 -confirm delete post
 -save edit does upload too

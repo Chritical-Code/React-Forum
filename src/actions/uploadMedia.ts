@@ -32,7 +32,7 @@ export async function uploadMedia(formData: FormData){
 
     //add id to path
     const filePath = path.join(process.cwd(), ("public/uploads/" + session?.user.id), (newImage.id + ".webp"));
-    prisma.postImage.update({
+    await prisma.postImage.update({
         where: {id: newImage.id},
         data: {src: ("/uploads/" + session?.user.id + "/" + newImage.id + ".webp")}
     });

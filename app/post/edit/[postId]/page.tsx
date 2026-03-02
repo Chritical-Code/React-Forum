@@ -6,6 +6,7 @@ import {prisma} from "@/prisma/prisma";
 import {deletePost} from "@/src/actions/deletePost";
 import { uploadMedia } from "@/src/actions/uploadMedia";
 import MyImg from "@/src/components/MyImg";
+import { PostImage } from "@/src/generated/prisma/client";
 
 type EditPostProps = {
     params: Promise<{
@@ -22,21 +23,30 @@ export default async function EditPost({params}: EditPostProps){
         where: {AND: {authorId: session?.user.id, id: resolved.postId}}
     });
 
+    //get images
+    const imageData = await prisma.postImage.findMany({
+        where: {postId: post?.id}
+    });
+
+    const images = imageData.map((image: PostImage, index) => {
+        return(
+            <MyImg key={index} image={image}></MyImg>
+        );
+    });
+
     //fill in form with gathered data
     if(post){
         return(
             <div className="flex flex-col items-center text-center w-full">
                 <p>Edit post: {resolved.postId}</p>
 
-                <div className="flex flex-col w-120 h-80 overflow-y-scroll overflow-x-hidden border">
-                    <MyImg></MyImg>
-                    <MyImg></MyImg>
-                    <MyImg></MyImg>
+                <div className="flex flex-col w-120 h-68 overflow-y-scroll overflow-x-hidden border">
+                    {images}
                 </div>
 
                 <Form action={uploadMedia} className="flex">
                     <input type="hidden" value={resolved.postId} name="postId"></input>
-                    <input type="file" name="image" className="btnf" ></input>
+                    <input type="file" name="image" className="btnf" accept="image/*"></input>
                     <button type="submit" className="btn">Upload</button>
                 </Form>
 
@@ -56,8 +66,6 @@ export default async function EditPost({params}: EditPostProps){
             </div>
         );
     }
-
-    //deny if incorrect data
 }
 
 type PostFormProps = {
