@@ -1,4 +1,5 @@
 import {prisma} from "@/prisma/prisma";
+import PostBox from "@/src/components/PostBox";
 import { Post } from "@/src/generated/prisma/client";
 
 export default async function Home() {
@@ -6,7 +7,7 @@ export default async function Home() {
 
     const postBoxes = posts.map((post: Post, index) => {
         return(
-            <PostBox post={post} key={index}></PostBox>
+            <PostBox key={index} post={post} viewOrEdit="view"></PostBox>
         );
     });
 
@@ -25,18 +26,6 @@ export default async function Home() {
                 {postBoxes}
             </div>
         </div>
-    );
-}
-
-
-function PostBox({post}: {post: Post}){
-    return(
-        <a href={"/post/view/" + post.id}>
-            <div className="shrink-0 bg-gray-400 w-2xl h-96 border m-2">
-                <p className="font-bold">{post.title}</p>
-                <p>{post.text}</p>
-            </div>
-        </a>
     );
 }
 

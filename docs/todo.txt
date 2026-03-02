@@ -1,7 +1,7 @@
 Nows:
 
 +media
--show image on postbox
+-reload images after uploading (perhaps our first use of state?)
 -make delete button work
 -add video uploading (mime types if statement)
 -look up ffmpeg
@@ -18,7 +18,6 @@ Nows:
 Future:
 +misc
 -image scroller component (takes inputs, fills them in, trash setting probably)
--postbox component (can be configured for view or edit, probably with links)
 -confirm delete image
 -confirm delete post
 -save edit does upload too

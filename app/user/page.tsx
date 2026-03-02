@@ -4,6 +4,7 @@ import {prisma} from "@/prisma/prisma";
 import { Post } from "@/src/generated/prisma/client";
 import Form from 'next/form'
 import {newPost} from "@/src/actions/newPost";
+import PostBox from "@/src/components/PostBox";
 
 export default async function DashboardPage() {
     const session = await getServerSession(authOptions);
@@ -14,7 +15,7 @@ export default async function DashboardPage() {
 
     const postBoxes = posts.map((post: Post, index) => {
             return(
-                <PostBox post={post} key={index}></PostBox>
+                <PostBox key={index} post={post} viewOrEdit="edit"></PostBox>
             );
     });
 
@@ -54,15 +55,4 @@ export default async function DashboardPage() {
         );
     }
 
-}
-
-function PostBox({post}: {post: Post}){
-    return(
-        <a href={"/post/edit/" + post.id}>
-            <div className="shrink-0 bg-gray-400 w-2xl h-96 border m-2">
-                <p className="font-bold">{post.title}</p>
-                <p>{post.text}</p>
-            </div>
-        </a>
-    );
 }

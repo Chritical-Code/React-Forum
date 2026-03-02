@@ -30,7 +30,7 @@ export default async function EditPost({params}: EditPostProps){
 
     const images = imageData.map((image: PostImage, index) => {
         return(
-            <MyImg key={index} image={image}></MyImg>
+            <MyImg key={index} image={image} trash={true}></MyImg>
         );
     });
 
