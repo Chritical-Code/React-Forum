@@ -1,9 +1,8 @@
 Nows:
 
 +media
--file naming: user based folders
--tie into database
--add delete button
+-show correct media per post
+-make delete button work
 -add video uploading (mime types if statement)
 -look up ffmpeg
 -implement ffmpeg

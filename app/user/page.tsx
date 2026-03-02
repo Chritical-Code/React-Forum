@@ -60,7 +60,7 @@ function PostBox({post}: {post: Post}){
     return(
         <a href={"/post/edit/" + post.id}>
             <div className="shrink-0 bg-gray-400 w-2xl h-96 border m-2">
-                <p>{post.title}</p>
+                <p className="font-bold">{post.title}</p>
                 <p>{post.text}</p>
             </div>
         </a>

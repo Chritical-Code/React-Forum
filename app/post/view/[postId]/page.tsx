@@ -13,11 +13,12 @@ export default async function ViewPost({params}: ViewPostProps){
         where: {id: resolved.postId}
     });
 
+
     return(
         <div className="flex flex-col items-center text-center">
             <p>View Post: {post?.id}</p>
 
-            <p>{post?.title}</p>
+            <p className="font-bold">{post?.title}</p>
 
             <p>{post?.text}</p>
         </div>
