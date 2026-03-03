@@ -20,7 +20,6 @@ export default async function ViewPost({params}: ViewPostProps){
     });
 
     const images = imageData.map((image: PostImage, index) => {
-        console.log("image src: " + image.src);
         return(
             <Image key={index} src={image.src} alt="alt text" width={480} height={270} className="border border-black"></Image>
         );

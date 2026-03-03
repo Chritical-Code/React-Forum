@@ -2,10 +2,6 @@ import HeaderButton from "./HeaderButton";
 import HeaderUsername from "./HeaderUsername";
 
 export default function Header(){
-    function handleClick(){
-        console.log("click button");
-    }
-
     return(
         <div className="flex items-center w-full h-14 shrink-0 bg-amber-400">
             <div className="flex w-1/4 items-cente">

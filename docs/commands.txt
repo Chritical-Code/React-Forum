@@ -1,0 +1,20 @@
+-------------------
+Node
+-------------------
+Update
+pnpm update
+
+Run
+pnpm dev
+
+
+
+
+--------------------
+Prisma
+--------------------
+After making changes to the database, you'll need to migrate.
+npx prisma migrate dev
+
+After making certain changes or updates, you need to generate a new client file.
+npx prisma generate

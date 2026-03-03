@@ -1,5 +1,6 @@
-Nows:
-
+--------------------
+Nows
+--------------------
 +media
 -make image delete button delete actual file too
 -reload images after uploading (perhaps our first use of state?)
@@ -14,8 +15,9 @@ Nows:
 -design post boxes
 -desing user page
 
-
-Future:
+--------------------
+Future
+--------------------
 +misc
 -universal image scroller component (takes inputs, fills them in, trash setting probably)
 -confirm delete image
@@ -23,6 +25,7 @@ Future:
 -save edit does upload too
 -consider doing actual validation instead of letting errors fly
 -image resizer
+-logging (get rid of logs or have them go somewhere or idk)
 
 +User
 -add more providers

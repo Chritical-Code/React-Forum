@@ -43,6 +43,4 @@ export async function uploadMedia(formData: FormData){
 
     //save file
     await sharpImage.toFile(filePath);
-
-    console.log("The file seems to have uploaded");
 }

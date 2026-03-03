@@ -20,7 +20,5 @@ export async function deleteImg(formData: FormData){
         await prisma.postImage.delete({
             where: {id: imageId}
         });
-
-        console.log("Image entry " + imageId + " deleted from database.");
     }
 }
