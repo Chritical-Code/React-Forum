@@ -3,6 +3,7 @@ Nows
 --------------------
 +media
 -make image delete button delete actual file too
+-also delete images when post gets deleted
 -reload images after uploading (perhaps our first use of state?)
 -add video uploading (mime types if statement)
 -look up ffmpeg
