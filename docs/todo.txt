@@ -2,9 +2,9 @@
 Nows
 --------------------
 +media
--make image delete button delete actual file too
 -also delete images when post gets deleted
 -reload images after uploading (perhaps our first use of state?)
+-reload images after deleting
 -add video uploading (mime types if statement)
 -look up ffmpeg
 -implement ffmpeg
@@ -27,6 +27,7 @@ Future
 -consider doing actual validation instead of letting errors fly
 -image resizer
 -logging (get rid of logs or have them go somewhere or idk)
+-only attempt uploads if theres a file selectedd
 
 +User
 -add more providers
