@@ -1,19 +1,7 @@
 --------------------
 Nows
 --------------------
-+getImageData
--figure out who even calls this thing (use effect and event handlers)
--figure out how to send over postid
--figure out what data to return
-
-+state
--make image manager seperate client component
--make prisma calls from a server action
--use effect triggers inital call
--prisma skip take cursor statements for getting next 10 entries
-
 +media
--reload images after uploading (perhaps our first use of state?)
 -reload images after deleting
 -add video uploading (mime types if statement)
 -look up ffmpeg
@@ -47,7 +35,7 @@ Future
 -links
 -search
 -tags
--load more posts dynamically
+-load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
 -algorithm
 -filters
 

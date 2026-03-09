@@ -1,7 +1,7 @@
 'use client';
 import Form from 'next/form'
 import { uploadMedia } from "@/src/actions/uploadMedia";
-import MyImg from "@/src/components/MyImg";
+import TrashableImage from "@/src/components/TrashableImage";
 import { PostImage } from "@/src/generated/prisma/client";
 import {getImageData} from "@/src/actions/getImageData";
 import { useEffect, useState } from 'react';
@@ -19,7 +19,7 @@ export default function ImageManager({postId}: ImageManagerProps){
 
     const images = imageData.map((image: PostImage, index) => {
         return(
-            <MyImg key={index} image={image} trash={true}></MyImg>
+            <TrashableImage key={index} image={image} reloadImageData={reloadImageData}></TrashableImage>
         );
     });
 

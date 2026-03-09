@@ -17,7 +17,7 @@ export default async function PostBox({post, viewOrEdit}: PostBoxProps){
             <div className="flex flex-col items-center shrink-0 bg-gray-400 w-121 h-80 border m-2 overflow-hidden">
                 <p className="font-bold">{post.title}</p>
                 <p>{post.text}</p>
-                {image && <MyImg image={image} trash={false}></MyImg>}
+                {image && <MyImg image={image}></MyImg>}
             </div>
         </a>
     );

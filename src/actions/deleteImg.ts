@@ -28,11 +28,8 @@ export async function deleteImg(formData: FormData){
             const filePath = path.join(process.cwd(), "public", path2);
             await fs.unlink(filePath);
             
-            return {ok: true};
         }
-        catch{
-            return {ok: false};
-        }
+        catch{}
         
     }
 }
