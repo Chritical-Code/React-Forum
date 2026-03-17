@@ -3,13 +3,11 @@ Nows
 --------------------
 
 
-
 --------------------
 Future
 --------------------
 +misc
 -view post text goes over too far
--postbox text shows too much text
 -postboxes should handle empty title/text/img better
 -universal image scroller component (takes inputs, fills them in, trash setting probably)
 -confirm delete image
