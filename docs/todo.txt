@@ -1,8 +1,9 @@
 --------------------
 Nows
 --------------------
++upload automatically after selecting file
+
 +media
--reload images after deleting
 -add video uploading (mime types if statement)
 -look up ffmpeg
 -implement ffmpeg
@@ -18,21 +19,22 @@ Nows
 Future
 --------------------
 +misc
+-view post text goes over too far
+-postbox text shows too much text
+-postboxes should handle empty title/text/img better
 -universal image scroller component (takes inputs, fills them in, trash setting probably)
 -confirm delete image
 -confirm delete post
--save edit does upload too
--consider doing actual validation instead of letting errors fly
+-add try-catches where needed
 -image resizer
--logging (get rid of logs or have them go somewhere or idk)
--only attempt uploads if theres a file selectedd
+-logging?
+-make post text preserve new lines
 
 +User
 -add more providers
 -likes
 
 +Browse
--links
 -search
 -tags
 -load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
@@ -40,9 +42,7 @@ Future
 -filters
 
 +Posts
--title
--text
--picture/video
+-video
 -comments
 -rating
 -link to profile
@@ -53,3 +53,6 @@ Future
 
 +Improve design
 -maybe look at some templates idk
+
++security
+-consider implementing a consistent way to authorize?

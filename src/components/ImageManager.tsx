@@ -4,7 +4,7 @@ import { uploadMedia } from "@/src/actions/uploadMedia";
 import TrashableImage from "@/src/components/TrashableImage";
 import { PostImage } from "@/src/generated/prisma/client";
 import {getImageData} from "@/src/actions/getImageData";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 type ImageManagerProps = {
     postId: string,
@@ -12,6 +12,7 @@ type ImageManagerProps = {
 
 export default function ImageManager({postId}: ImageManagerProps){
     const [imageData, setImageData] = useState<PostImage[]>([]);
+    const formRef = useRef<HTMLFormElement | null>(null);
 
     useEffect(() => {
         reloadImageData();
@@ -32,6 +33,10 @@ export default function ImageManager({postId}: ImageManagerProps){
         await uploadMedia(formData);
         reloadImageData();
     }
+
+    function handleFileChange(){
+        formRef.current?.requestSubmit();
+    }
     
     return(
         <>
@@ -39,13 +44,11 @@ export default function ImageManager({postId}: ImageManagerProps){
                 {images}
             </div>
 
-            <Form action={async () => {}} onSubmit={handleSubmit} className="flex">
+            <Form action={async () => {}} onSubmit={handleSubmit} className="flex flex-col items-center mb-10" ref={formRef}>
                 <input type="hidden" value={postId} name="postId"></input>
-                <input type="file" name="image" className="btnf" accept="image/*" required></input>
-                <button type="submit" className="btn">Upload</button>
+                <h2 className="font-bold">Add Images:</h2>
+                <input type="file" name="image" className="btnf" accept="image/*" onChange={() => handleFileChange()} required></input>
             </Form>
-
-            <button onClick={() => {reloadImageData()}} className="btn">Refresh</button>
         </>
     );
 }

@@ -16,12 +16,10 @@ export default async function EditPost({params}: EditPostProps){
     const session = await getServerSession(authOptions);
     const resolved = await params;
 
-    //get post where userid and post id match
     const post = await prisma.post.findFirst({
         where: {AND: {authorId: session?.user.id, id: resolved.postId}}
     });
-
-    //fill in form with gathered data
+ 
     if(post){
         return(
             <div className="flex flex-col items-center text-center w-full">
