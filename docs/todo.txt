@@ -1,19 +1,8 @@
 --------------------
 Nows
 --------------------
-+upload automatically after selecting file
 
-+media
--add video uploading (mime types if statement)
--look up ffmpeg
--implement ffmpeg
 
-+Posts
--figure out media/images/vids
--design view
--design edit
--design post boxes
--desing user page
 
 --------------------
 Future
@@ -31,7 +20,6 @@ Future
 -make post text preserve new lines
 
 +User
--add more providers
 -likes
 
 +Browse
@@ -47,6 +35,12 @@ Future
 -rating
 -link to profile
 -validation: The satisfies Operator
+-better design
+
++media
+-add video uploading (mime types if statement)
+-look up ffmpeg
+-implement ffmpeg
 
 +Settings
 -theme
