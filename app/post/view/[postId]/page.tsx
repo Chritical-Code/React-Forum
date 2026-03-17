@@ -27,13 +27,13 @@ export default async function ViewPost({params}: ViewPostProps){
 
     return(
         <div className="flex flex-col items-center">
-            <p className="font-bold w-8/12 text-center">{post?.title}</p>
+            <p className="font-bold w-120 text-center">{post?.title}</p>
 
             <div className="flex flex-col w-120 h-68 overflow-y-scroll overflow-x-hidden border m-0">
                 {images}
             </div>
 
-            <p className="w-8/12">{post?.text}</p>
+            <p className="w-120">{post?.text}</p>
         </div>
     );
 
