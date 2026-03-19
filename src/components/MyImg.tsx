@@ -7,6 +7,6 @@ type MyImgProps = {
 
 export default function MyImg({image}: MyImgProps){
     return(
-        <Image src={image.src} alt="alt text" width={480} height={270} className="border border-black"></Image>
+        <Image src={image.src} alt={image.id} width={480} height={270} className="border border-black"></Image>
     );
 }

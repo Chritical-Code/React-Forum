@@ -1,6 +1,6 @@
 import {prisma} from "@/prisma/prisma";
 import { PostImage } from "@/src/generated/prisma/client";
-import Image from 'next/image'
+import MyImg from "@/src/components/MyImg";
 
 type ViewPostProps = {
     params: Promise<{
@@ -21,19 +21,19 @@ export default async function ViewPost({params}: ViewPostProps){
 
     const images = imageData.map((image: PostImage, index) => {
         return(
-            <Image key={index} src={image.src} alt="alt text" width={480} height={270} className="border border-black"></Image>
+            <MyImg key={index} image={image}></MyImg>
         );
     });
 
     return(
         <div className="flex flex-col items-center">
-            <p className="font-bold w-120 text-center">{post?.title}</p>
+            <p className="font-bold w-90 md:w-120 text-center">{post?.title}</p>
 
-            <div className="flex flex-col w-120 h-68 overflow-y-scroll overflow-x-hidden border m-0">
+            <div className="flex flex-col w-90 h-51 md:w-120 md:h-67.5 overflow-y-scroll overflow-x-hidden border m-0 items-center">
                 {images}
             </div>
 
-            <p className="w-120">{post?.text}</p>
+            <p className="w-90 md:w-120">{post?.text}</p>
         </div>
     );
 

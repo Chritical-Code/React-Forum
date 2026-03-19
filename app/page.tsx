@@ -12,19 +12,8 @@ export default async function Home() {
     });
 
     return(
-        <div className="flex flex-row overflow-hidden">
-            <div className="flex flex-col w-1/5">
-                <p className="font-bold m-1">Tags</p>
-                <Tag text="One"></Tag>
-                <Tag text="Two"></Tag>
-                <Tag text="Three"></Tag>
-                <Tag text="Four"></Tag>
-                <Tag text="Five"></Tag>
-            </div>
-
-            <div className="flex flex-col w-3/5 items-center overflow-y-scroll">
-                {postBoxes}
-            </div>
+        <div className="flex flex-col overflow-y-scroll items-center w-full">
+            {postBoxes}
         </div>
     );
 }

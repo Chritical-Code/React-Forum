@@ -23,7 +23,7 @@ type LinkProps = {
 
 function Link({text, link}: LinkProps){
     return(
-        <a href={link} className="flex items-center justify-center shrink-0 m-1 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer">
+        <a href={link} className="whitespace-nowrap max-w-24 md:max-w-48 overflow-hidden m-0 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer">
             {text}
         </a>
     );

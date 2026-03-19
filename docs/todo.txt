@@ -2,6 +2,15 @@
 Nows
 --------------------
 
++Standardized sizing
+-switch to mobile-first design, with breakpoints for larger screens
+-do that size thing with images too
+-postboxes dont fit on mobile
+
++allow sign in from 192.168....
+
++rework tags section design
+
 --------------------
 Future
 --------------------
@@ -13,7 +22,8 @@ Future
 -image resizer
 -logging?
 -make post text preserve new lines
--postboxes dont fit on mobile
+-larger photos?
+-check if we still need the <head>
 
 +User
 -likes
