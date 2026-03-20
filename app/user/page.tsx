@@ -28,7 +28,7 @@ export default async function DashboardPage() {
         });
 
         return (
-            <div className="flex flex-col items-center overflow-y-scroll">
+            <div className="flex flex-col items-center overflow-y-scroll w-full">
                 <h1 className="font-bold m2">Profile</h1>
                 <img className="w-20 h-20 m2" src={session?.user?.image ?? ""}></img>
                 <p className="m2">{session?.user?.name}</p>

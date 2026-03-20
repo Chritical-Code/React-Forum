@@ -22,8 +22,8 @@ export default async function EditPost({params}: EditPostProps){
  
     if(post){
         return(
-            <div className="flex flex-col items-center text-center w-full">
-                <p>Edit post: {resolved.postId}</p>
+            <div className="flex flex-col items-center text-center w-full overflow-y-scroll overflow-x-hidden">
+                <h2 className="font-bold">Edit Post</h2>
 
                 <ImageManager postId={post.id}></ImageManager>
 
@@ -54,11 +54,11 @@ type PostFormProps = {
 function PostForm({inTitle, inText, postID}: PostFormProps){
     return(
         <Form action={updatePost} className="flex flex-col items-center w-full">
-            <p>Title</p>
-            <input type="text" name="title" className="border w-1/5" defaultValue={inTitle}></input>
+            <h2 className="font-bold">Title</h2>
+            <input type="text" name="title" className="border w-90 md:w-120" defaultValue={inTitle}></input>
 
-            <p>Text</p>
-            <textarea name="text" className="border w-2/5" defaultValue={inText}></textarea>
+            <h2 className="font-bold">Text</h2>
+            <textarea name="text" className="border w-90 md:w-120" defaultValue={inText}></textarea>
 
             <input type="hidden" name="postId" value={postID}></input>
 

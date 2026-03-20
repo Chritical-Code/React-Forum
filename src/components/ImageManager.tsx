@@ -40,14 +40,14 @@ export default function ImageManager({postId}: ImageManagerProps){
     
     return(
         <>
-            <div className="flex flex-col w-120 h-68 overflow-y-scroll overflow-x-hidden border">
+            <div className="flex flex-col w-90 h-51 md:w-120 md:h-67.5 overflow-y-scroll overflow-x-hidden border m-0 items-center">
                 {images}
             </div>
 
             <Form action={async () => {}} onSubmit={handleSubmit} className="flex flex-col items-center mb-10" ref={formRef}>
                 <input type="hidden" value={postId} name="postId"></input>
-                <h2 className="font-bold">Add Images:</h2>
-                <input type="file" name="image" className="btnf" accept="image/*" onChange={() => handleFileChange()} required></input>
+                <label htmlFor="file-upload" className="btn w-24">Add Image</label>
+                <input type="file" id="file-upload" name="image" className="hidden" accept="image/*" onChange={() => handleFileChange()} required></input>
             </Form>
         </>
     );
