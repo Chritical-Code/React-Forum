@@ -2,11 +2,6 @@
 Nows
 --------------------
 
-+actual image scroller component
--scroll buttons
- .switch to scrollto and track positions (use refs? unless i need state? index)
--snap-scrolling
-
 --------------------
 Future
 --------------------
@@ -22,6 +17,8 @@ Future
 -username cuts off on mobile, maybe just say profile. or combine settings and profile into a popup.
 -click picture to open bigger
 -show oldest photo first in posts?
+-phone browser gets stuck scrolled up and cant be fixed
+-improve scrolling (scrollto, track index with ref or maybe state. add swipe scrolling)
 
 +User
 -likes

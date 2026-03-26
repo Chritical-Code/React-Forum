@@ -13,7 +13,7 @@ export default function ImageScroller({children}: Readonly<{children: React.Reac
 
     return(
         <div className="flex flex-col items-center">
-            <div ref={scrollDivRef} className="flex flex-row w-90 h-51 md:w-120 md:h-67.5 overflow-x-scroll overflow-y-hidden border m-0">
+            <div ref={scrollDivRef} className="flex flex-row w-90 h-51 md:w-120 md:h-67.5 overflow-hidden border m-0">
                 {children}
             </div>
 
