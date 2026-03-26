@@ -5,6 +5,7 @@ import TrashableImage from "@/src/components/TrashableImage";
 import { PostImage } from "@/src/generated/prisma/client";
 import {getImageData} from "@/src/actions/getImageData";
 import { useEffect, useState, useRef } from 'react';
+import ImageScroller from "./ImageScroller";
 
 type ImageManagerProps = {
     postId: string,
@@ -40,9 +41,9 @@ export default function ImageManager({postId}: ImageManagerProps){
     
     return(
         <>
-            <div className="flex flex-col w-90 h-51 md:w-120 md:h-67.5 overflow-y-scroll overflow-x-hidden border m-0 items-center">
+            <ImageScroller>
                 {images}
-            </div>
+            </ImageScroller>
 
             <Form action={async () => {}} onSubmit={handleSubmit} className="flex flex-col items-center mb-10" ref={formRef}>
                 <input type="hidden" value={postId} name="postId"></input>

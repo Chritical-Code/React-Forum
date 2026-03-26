@@ -2,17 +2,15 @@
 Nows
 --------------------
 
-+Finish resizing screens for mobile
--edit
--etc
-
-+rework tags section design
++actual image scroller component
+-scroll buttons
+ .switch to scrollto and track positions (use refs? unless i need state? index)
+-snap-scrolling
 
 --------------------
 Future
 --------------------
 +misc
--universal image scroller component (takes inputs, fills them in, trash setting probably)
 -confirm delete image
 -confirm delete post
 -add try-catches where needed
@@ -22,13 +20,19 @@ Future
 -larger photos?
 -check if we still need the <head>
 -username cuts off on mobile, maybe just say profile. or combine settings and profile into a popup.
+-click picture to open bigger
+-show oldest photo first in posts?
 
 +User
 -likes
 
++Tags
+-add tags to posts
+-filter by tags
+-blacklist tags
+
 +Browse
 -search
--tags
 -load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
 -algorithm
 -filters
