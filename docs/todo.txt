@@ -2,8 +2,6 @@
 Nows
 --------------------
 
--improve scrolling
-.scrollto, track index with ref
 
 --------------------
 Future
@@ -21,8 +19,10 @@ Future
 -click picture to open bigger
 -show oldest photo first in posts?
 -phone browser gets stuck scrolled up and cant be fixed
--improve scrolling (scrollto, track index with ref or maybe state. add swipe scrolling. add image count indicator.)
--organize components
+-improve scrolling (add swipe scrolling. add image count indicator.)
+-organize components folder
+-post image order
+-post order
 
 +User
 -likes
@@ -56,6 +56,3 @@ Future
 
 +Improve design
 -maybe look at some templates idk
-
-+security
--consider implementing a consistent way to authorize?
