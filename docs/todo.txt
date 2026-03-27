@@ -2,6 +2,9 @@
 Nows
 --------------------
 
+-improve scrolling
+.scrollto, track index with ref
+
 --------------------
 Future
 --------------------
@@ -18,7 +21,8 @@ Future
 -click picture to open bigger
 -show oldest photo first in posts?
 -phone browser gets stuck scrolled up and cant be fixed
--improve scrolling (scrollto, track index with ref or maybe state. add swipe scrolling)
+-improve scrolling (scrollto, track index with ref or maybe state. add swipe scrolling. add image count indicator.)
+-organize components
 
 +User
 -likes

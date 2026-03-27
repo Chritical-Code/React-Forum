@@ -4,11 +4,31 @@ import { useRef } from "react";
 
 export default function ImageScroller({children}: Readonly<{children: React.ReactNode;}>){
     const scrollDivRef = useRef<HTMLDivElement | null>(null);
+    const indexRef = useRef<number>(0);
 
     function handleScroll(direction: number){
-        //get photo width
-        const photoWidth = scrollDivRef.current?.firstElementChild ? scrollDivRef.current?.firstElementChild.clientWidth : 0;
-        scrollDivRef.current?.scrollBy({left:(photoWidth + 1) * direction, behavior:"smooth"});
+        //check for child elements
+        const arrLength = scrollDivRef.current?.children.length ?? 0;
+
+        if(arrLength > 0){
+            let newIndex = indexRef.current + direction;
+
+            //floor/cieling
+            if(newIndex < 0){
+                newIndex = 0;
+            }
+            else if(newIndex > arrLength -1){
+                newIndex = arrLength -1;
+            }
+
+            //get width of element
+            const width = scrollDivRef.current?.children[0].clientWidth ?? 0;
+
+            //apply
+            scrollDivRef.current?.scrollTo({left: (width * newIndex), behavior:"smooth"});
+            indexRef.current = newIndex;
+            
+        }
     }
 
     return(
