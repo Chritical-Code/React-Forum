@@ -2,10 +2,17 @@
 Nows
 --------------------
 
++likes
 
 --------------------
 Future
 --------------------
+todo
+-add basic features
+-add basic design
+-polish features
+-polish design
+
 +misc
 -confirm delete image
 -confirm delete post
@@ -13,11 +20,9 @@ Future
 -image resizer
 -logging?
 -make post text preserve new lines
--larger photos?
 -check if we still need the <head>
 -username cuts off on mobile, maybe just say profile. or combine settings and profile into a popup.
--click picture to open bigger
--show oldest photo first in posts?
+-click image to open bigger
 -phone browser gets stuck scrolled up and cant be fixed
 -improve scrolling (add swipe scrolling. add image count indicator.)
 -organize components folder

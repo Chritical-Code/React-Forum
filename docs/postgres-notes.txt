@@ -7,6 +7,9 @@ sudo su - postgres
 check postgres status
 sudo systemctl status postgresql
 
+restart postgresql
+sudo systemctl restart postgresql
+
 config located at
 cd /etc/postgresql/16/main/
 
