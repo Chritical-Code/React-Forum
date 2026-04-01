@@ -27,15 +27,51 @@ export default async function ViewPost({params}: ViewPostProps){
     });
 
     return(
-        <div className="flex flex-col items-center">
-            <p className="font-bold w-90 md:w-120 text-center">{post?.title}</p>
+        <div className="flex flex-col items-center overflow-y-scroll w-full">
+            <div className="flex flex-col items-center mt-2 w-90 md:w-120">
+                <p className="font-bold text-center mb-2">{post?.title}</p>
 
-            <ImageScroller>
-                {images}
-            </ImageScroller>
+                <ImageScroller>
+                    {images}
+                </ImageScroller>
 
-            <p className="w-90 md:w-120">{post?.text}</p>
+                <p className="text-left w-full mt-2">{post?.text}</p>
+            </div>
+
+            <div className="flex flex-row items-center h-12 w-94 md:w-124 p-2 mt-8 mb-2 shrink-0 border-t border-b">
+                <p>Comments</p>
+                <div className="flex grow"></div>
+                <p>Likes</p>
+            </div>
+
+            <div className="flex flex-col items-center">
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+                <Comment username="Username" text="Text"></Comment>
+            </div>
         </div>
     );
 
+}
+
+
+type CommentProps = {
+    username: string,
+    text: string,
+}
+
+function Comment({username, text}: CommentProps){
+    return(
+        <div className="w-90 md:w-120 border-b p-2">
+            <p className="font-bold">{username}</p>
+            <p className="">{text}</p>
+        </div>
+    );
 }

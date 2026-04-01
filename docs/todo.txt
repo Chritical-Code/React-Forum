@@ -3,6 +3,8 @@ Nows
 --------------------
 
 +likes
+-like button
+-my likes list
 
 --------------------
 Future
@@ -28,6 +30,7 @@ todo
 -organize components folder
 -post image order
 -post order
+-part of image is getting cut off
 
 +User
 -likes
