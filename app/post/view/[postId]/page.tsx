@@ -2,6 +2,7 @@ import {prisma} from "@/prisma/prisma";
 import { PostImage } from "@/src/generated/prisma/client";
 import MyImg from "@/src/components/MyImg";
 import ImageScroller from "@/src/components/ImageScroller";
+import LikeButton from "@/src/components/LikeButton";
 
 type ViewPostProps = {
     params: Promise<{
@@ -39,9 +40,10 @@ export default async function ViewPost({params}: ViewPostProps){
             </div>
 
             <div className="flex flex-row items-center h-12 w-94 md:w-124 p-2 mt-8 mb-2 shrink-0 border-t border-b">
-                <p>Comments</p>
+                <p>Comments - 50</p>
                 <div className="flex grow"></div>
-                <p>Likes</p>
+                <LikeButton postId={resolved.postId}></LikeButton>
+                <p>- 500</p>
             </div>
 
             <div className="flex flex-col items-center">

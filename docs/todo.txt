@@ -4,6 +4,7 @@ Nows
 
 +likes
 -like button
+ .like button component
 -my likes list
 
 --------------------
