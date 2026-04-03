@@ -4,6 +4,7 @@ import Form from "next/form";
 import { likePost } from "@/src/actions/likePost";
 import { useState, useEffect } from "react";
 import { getLiked } from "@/src/actions/getLiked";
+import { getNumLikes } from "@/src/actions/getNumLikes";
 
 type LikeButtonProps = {
     postId: string,
@@ -11,6 +12,7 @@ type LikeButtonProps = {
 
 export default function LikeButton({postId}: LikeButtonProps){
     const [liked, setLiked] = useState<boolean>(false);
+    const [numLikes, setNumLikes] = useState<number>(0);
 
     useEffect(() => {
         reloadLiked();
@@ -18,6 +20,7 @@ export default function LikeButton({postId}: LikeButtonProps){
 
     async function reloadLiked(){
         setLiked(await getLiked({postId}));
+        setNumLikes(await getNumLikes({postId}));
     }
 
     async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>){
@@ -27,13 +30,17 @@ export default function LikeButton({postId}: LikeButtonProps){
     }
 
     return(
-        <Form action={async () => {}} onSubmit={handleSubmit}>
-            <button type="submit" 
-            className="mr-1 text-5xl text-center hover:cursor-pointer">
-                <Heart liked={liked}></Heart>
-            </button>
-            <input type="hidden" name="postId" value={postId}></input>
-        </Form>
+        <>
+            <Form action={async () => {}} onSubmit={handleSubmit}>
+                <button type="submit" 
+                className="mr-1 text-5xl text-center hover:cursor-pointer">
+                    <Heart liked={liked}></Heart>
+                </button>
+                <input type="hidden" name="postId" value={postId}></input>
+            </Form>
+
+            <p>{numLikes}</p>
+        </>
     );
 }
 

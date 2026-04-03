@@ -43,7 +43,6 @@ export default async function ViewPost({params}: ViewPostProps){
                 <p>Comments - 50</p>
                 <div className="flex grow"></div>
                 <LikeButton postId={resolved.postId}></LikeButton>
-                <p>- 500</p>
             </div>
 
             <div className="flex flex-col items-center">
