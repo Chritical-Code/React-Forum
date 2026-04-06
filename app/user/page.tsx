@@ -38,7 +38,7 @@ export default async function DashboardPage() {
                 </a>
 
                 <div className="flex items-center w-94 md:w-124 mt-1 mb-1">
-                    <a className="btn">Likes</a>
+                    <a href="/user/likes" className="btn">Likes</a>
                     <div className="grow"></div>
                     <a className="btn">Favorites</a>
                 </div>
