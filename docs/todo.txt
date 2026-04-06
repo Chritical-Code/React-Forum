@@ -28,7 +28,6 @@ todo
 -post order
 -part of image is getting cut off
 -see if we need to get session everywhere or if we should pass it everywhere
--empty post looked weird on mobile
 
 +User
 -likes
