@@ -37,12 +37,26 @@ export default async function DashboardPage() {
                     Sign out
                 </a>
 
-                <Form action={newPost} className="">
-                    <button type="submit" className="btn">New Post</button>
-                </Form>
+                <div className="flex items-center w-94 md:w-124 mt-1 mb-1">
+                    <a className="btn">Likes</a>
+                    <div className="grow"></div>
+                    <a className="btn">Favorites</a>
+                </div>
 
-                <div className="flex flex-col w-3/5 items-center">
-                    {postBoxes}
+                <div className="flex flex-col items-center w-94 md:w-124 border-t">
+                    <div className="flex items-center w-full border-b pt-1 pb-1">
+                        <h2 className="font-bold">Posts</h2>
+
+                        <div className="grow"></div>
+
+                        <Form action={newPost} className="">
+                            <button type="submit" className="btn">New Post</button>
+                        </Form>
+                    </div>
+
+                    <div className="flex flex-col w-3/5 items-center">
+                        {postBoxes}
+                    </div>
                 </div>
             </div>
         );
