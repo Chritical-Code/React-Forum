@@ -32,9 +32,9 @@ export default async function ViewPost({params}: ViewPostProps){
             <div className="flex flex-col items-center mt-2 w-90 md:w-120">
                 <p className="font-bold text-center mb-2">{post?.title}</p>
 
-                <ImageScroller>
+                {(images.length > 0) && <ImageScroller>
                     {images}
-                </ImageScroller>
+                </ImageScroller>}
 
                 <p className="text-left w-full mt-2">{post?.text}</p>
             </div>

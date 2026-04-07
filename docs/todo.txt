@@ -3,7 +3,7 @@ Nows
 --------------------
 
 
--dont show empty titles on browse
+-custom size for imageless post
 
 --------------------
 Future
@@ -31,7 +31,6 @@ todo
 -post order
 -part of image is getting cut off
 -see if we need to get session everywhere or if we should pass it everywhere
--custom size for imageless post
 
 +User
 -likes

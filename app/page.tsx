@@ -16,7 +16,7 @@ export default async function Home() {
     });
 
     return(
-        <div className="flex flex-col overflow-y-scroll items-center w-full">
+        <div className="flex flex-col overflow-y-scroll items-center w-full mb-4">
             {postBoxes}
         </div>
     );
