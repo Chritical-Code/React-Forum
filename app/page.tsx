@@ -3,7 +3,11 @@ import PostBox from "@/src/components/PostBox";
 import { Post } from "@/src/generated/prisma/client";
 
 export default async function Home() {
-    const posts = await prisma.post.findMany();
+    const posts = await prisma.post.findMany({
+        where :{
+            NOT: {title: ""}
+        }
+    });
 
     const postBoxes = posts.map((post: Post, index) => {
         return(
