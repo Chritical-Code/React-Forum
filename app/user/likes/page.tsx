@@ -24,12 +24,12 @@ export default async function LikesPage(){
     });
 
     return(
-        <div className="flex flex-col items-center overflow-y-scroll w-full">
+        <>
             <h2 className="font-bold">Your Likes:</h2>
 
             <div className="flex flex-col w-3/5 items-center">
                 {postBoxes}
             </div>
-        </div>
+        </>
     );
 }

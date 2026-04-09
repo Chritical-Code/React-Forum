@@ -2,7 +2,9 @@
 Nows
 --------------------
 
--check if we still need the <head>
+
++find an elegant way to have gaps at the bottom
+-consolidate each page's outer div
 
 --------------------
 Future
@@ -12,6 +14,10 @@ todo
 -add basic design
 -polish features
 -polish design
+-document
+-github
+-portfolio-site
+-resume
 
 +misc
 -confirm delete image
@@ -29,7 +35,7 @@ todo
 -post order
 -part of image is getting cut off
 -see if we need to get session everywhere or if we should pass it everywhere
--find an elegant way to have gaps at the bottom
+-do we need to if(session) every login-required page?
 
 +User
 -likes

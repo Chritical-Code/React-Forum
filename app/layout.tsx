@@ -16,7 +16,11 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
             <body className="flex flex-col w-screen h-screen overflow-hidden items-center">
                 <AuthWrapper>
                     <Header></Header>
-                    {children}
+                    <div className="flex flex-col overflow-y-scroll items-center w-full overflow-x-hidden">
+                        {children}
+
+                        <div className="w-full h-2 shrink-0"></div>
+                    </div>
                 </AuthWrapper>
             </body>
         </html>

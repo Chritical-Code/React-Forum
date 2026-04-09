@@ -22,7 +22,7 @@ export default async function EditPost({params}: EditPostProps){
  
     if(post){
         return(
-            <div className="flex flex-col items-center text-center w-full overflow-y-scroll overflow-x-hidden">
+            <>
                 <h2 className="font-bold">Edit Post</h2>
 
                 <ImageManager postId={post.id}></ImageManager>
@@ -33,7 +33,7 @@ export default async function EditPost({params}: EditPostProps){
                     <input type="hidden" name="postId" value={resolved.postId}></input>
                     <button type="submit" className="btn bg-red-700">Delete</button>
                 </Form>
-            </div>
+            </>
         );
     }
     else{

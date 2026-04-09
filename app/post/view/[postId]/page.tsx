@@ -28,7 +28,7 @@ export default async function ViewPost({params}: ViewPostProps){
     });
 
     return(
-        <div className="flex flex-col items-center overflow-y-scroll w-full">
+        <>
             <div className="flex flex-col items-center mt-2 w-90 md:w-120">
                 <p className="font-bold text-center mb-2">{post?.title}</p>
 
@@ -57,7 +57,7 @@ export default async function ViewPost({params}: ViewPostProps){
                 <Comment username="Username" text="Text"></Comment>
                 <Comment username="Username" text="Text"></Comment>
             </div>
-        </div>
+        </>
     );
 
 }
