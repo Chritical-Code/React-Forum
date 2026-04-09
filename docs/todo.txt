@@ -3,8 +3,6 @@ Nows
 --------------------
 
 
-+find an elegant way to have gaps at the bottom
--consolidate each page's outer div
 
 --------------------
 Future
@@ -13,7 +11,7 @@ todo
 -add basic features
 -add basic design
 -polish features
--polish design
+-polish design (look at templates/examples)
 -document
 -github
 -portfolio-site
@@ -36,6 +34,8 @@ todo
 -part of image is getting cut off
 -see if we need to get session everywhere or if we should pass it everywhere
 -do we need to if(session) every login-required page?
+-postbox hitbox is a bit off
+-favicon
 
 +User
 -likes
@@ -55,10 +55,8 @@ todo
 +Posts
 -video
 -comments
--rating
 -link to profile
 -validation: The satisfies Operator
--better design
 
 +media
 -add video uploading (mime types if statement)
@@ -67,6 +65,3 @@ todo
 
 +Settings
 -theme
-
-+Improve design
--maybe look at some templates idk
