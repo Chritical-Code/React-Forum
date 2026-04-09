@@ -2,8 +2,7 @@
 Nows
 --------------------
 
-
--custom size for imageless post
+-check if we still need the <head>
 
 --------------------
 Future
@@ -21,7 +20,6 @@ todo
 -image resizer
 -logging?
 -make post text preserve new lines
--check if we still need the <head>
 -username cuts off on mobile, maybe just say profile. or combine settings and profile into a popup.
 -click image to open bigger
 -phone browser gets stuck scrolled up and cant be fixed
@@ -31,6 +29,7 @@ todo
 -post order
 -part of image is getting cut off
 -see if we need to get session everywhere or if we should pass it everywhere
+-find an elegant way to have gaps at the bottom
 
 +User
 -likes
