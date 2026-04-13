@@ -1,12 +1,13 @@
-"use client";
-import {useSession} from "next-auth/react";
+import {getServerSession} from "next-auth";
+import {authOptions} from "@/app/api/auth/[...nextauth]/route";
+import {prisma} from "@/prisma/prisma";
 
-export default function HeaderUsername(){
-    const {data: session, status} = useSession()
+export default async function HeaderUsername(){
+    const session = await getServerSession(authOptions);
 
-    if(status === "authenticated"){
+    if(session){
         return(
-            <Link text={session.user?.name ?? ""} link={"/user"}/>
+            <Link text={session?.user.name ?? ""} link={"/user"}/>
         ); 
     }
     else{
