@@ -2,9 +2,6 @@
 Nows
 --------------------
 
-+other user's page
--link to on posts
-
 --------------------
 Future
 --------------------
@@ -37,9 +34,6 @@ todo
 -favicon
 -dont allow spaces in usernames?
 -make usernames unique?
-
-+User
--anoother user's page (also link to on posts and comments)
 
 +Tags
 -add tags to posts

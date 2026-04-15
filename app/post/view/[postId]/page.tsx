@@ -17,6 +17,10 @@ export default async function ViewPost({params}: ViewPostProps){
         where: {id: resolved.postId}
     });
 
+    const user = await prisma.user.findUnique({
+        where: {id: post?.authorId}
+    });
+
     const imageData = await prisma.postImage.findMany({
         where: {postId: resolved.postId}
     });
@@ -31,6 +35,8 @@ export default async function ViewPost({params}: ViewPostProps){
         <>
             <div className="flex flex-col items-center mt-2 w-90 md:w-120">
                 <p className="font-bold text-center mb-2">{post?.title}</p>
+
+                <a href={"/user/" + user?.id} className="hover:text-gray-600">{user?.name}</a>
 
                 {(images.length > 0) && <ImageScroller>
                     {images}

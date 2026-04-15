@@ -15,9 +15,7 @@ export default async function User({params}: UserProps){
         where: {OR: [{id: resolved.userId}, {name: {contains: resolved.userId, mode: "insensitive"}}]}
     });
 
-    if(!user){
-        return(<><p>User not found.</p></>);
-    }
+    if(!user){return(<p>User not found.</p>);}
     
     const posts = await prisma.post.findMany({
         where: {authorId: user?.id}
