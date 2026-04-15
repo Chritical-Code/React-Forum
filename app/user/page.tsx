@@ -14,9 +14,9 @@ export default async function DashboardPage() {
     });
 
     const postBoxes = posts.map((post: Post, index) => {
-            return(
-                <PostBox key={index} post={post} viewOrEdit="edit"></PostBox>
-            );
+        return(
+            <PostBox key={index} post={post} viewOrEdit="edit"></PostBox>
+        );
     });
 
 
@@ -29,11 +29,11 @@ export default async function DashboardPage() {
 
         return (
             <>
-                <h1 className="font-bold m2">Profile</h1>
-                <img className="w-20 h-20 m2" src={session?.user?.image ?? ""}></img>
-                <p className="m2">{session?.user?.name}</p>
-                <p className="m2">{session?.user?.email}</p>
-                <a className="btn" href="/api/auth/signout">
+                <h1 className="font-bold m-1">Profile</h1>
+                <img className="w-20 h-20 m-1" src={session?.user?.image ?? ""}></img>
+                <p className="">{session?.user?.name}</p>
+                <p className="">{session?.user?.email}</p>
+                <a className="btn m-2" href="/api/auth/signout">
                     Sign out
                 </a>
 
@@ -54,7 +54,7 @@ export default async function DashboardPage() {
                         </Form>
                     </div>
 
-                    <div className="flex flex-col w-3/5 items-center">
+                    <div className="flex flex-col items-center">
                         {postBoxes}
                     </div>
                 </div>

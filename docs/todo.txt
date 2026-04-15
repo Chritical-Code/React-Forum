@@ -2,6 +2,8 @@
 Nows
 --------------------
 
++other user's page
+-link to on posts
 
 --------------------
 Future
@@ -20,8 +22,7 @@ todo
 -confirm delete image
 -confirm delete post
 -add try-catches where needed
--image resizer
--logging?
+-image cropper
 -make post text preserve new lines
 -username cuts off on mobile, maybe just say profile. or combine settings and profile into a popup.
 -click image to open bigger
@@ -31,13 +32,13 @@ todo
 -post image order
 -post order
 -part of image is getting cut off
--see if we need to get session everywhere or if we should pass it everywhere
 -do we need to if(session) every login-required page?
 -postbox hitbox is a bit off
 -favicon
+-dont allow spaces in usernames?
+-make usernames unique?
 
 +User
--likes
 -anoother user's page (also link to on posts and comments)
 
 +Tags
