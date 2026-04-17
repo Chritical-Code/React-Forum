@@ -4,7 +4,9 @@ Nows
 
 +comments
 -add form to make them
+ .post comment action
 -display them on posts
+-commenting reloads comment state
 
 --------------------
 Future
@@ -40,6 +42,7 @@ todo
 -make usernames unique?
 -also add validation to forms other than post
 -load more comments dynamically
+-simplifiy some prisma with include: author: true, etc
 
 +Tags
 -add tags to posts
