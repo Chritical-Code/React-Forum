@@ -40,7 +40,7 @@ export default async function ViewPost({params}: ViewPostProps){
 
     const comments = commentData.map((comment, index) => {
         return(
-            <CommentComponent key={index} username={comment.author.name} text={comment.text}></CommentComponent>
+            <CommentComponent key={index} username={comment.author.name} text={comment.text} userId={comment.authorId}></CommentComponent>
         );
     });
 
@@ -84,12 +84,13 @@ export default async function ViewPost({params}: ViewPostProps){
 type CommentProps = {
     username: string | null,
     text: string,
+    userId: string,
 }
 
-function CommentComponent({username, text}: CommentProps){
+function CommentComponent({username, text, userId}: CommentProps){
     return(
         <div className="w-90 md:w-120 border-b p-1">
-            <p className="font-bold">{username}</p>
+            <a href={"/user/" + userId} className="font-bold hover:text-gray-500">{username}</a>
             <p className="">{text}</p>
         </div>
     );

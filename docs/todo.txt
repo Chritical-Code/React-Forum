@@ -3,9 +3,7 @@ Nows
 --------------------
 
 +comments
--add form to make them
- .post comment action
--display them on posts
+-links to user
 -commenting reloads comment state
 
 --------------------
