@@ -2,6 +2,10 @@
 Nows
 --------------------
 
++comments
+-add form to make them
+-display them on posts
+
 --------------------
 Future
 --------------------
@@ -34,6 +38,8 @@ todo
 -favicon
 -dont allow spaces in usernames?
 -make usernames unique?
+-also add validation to forms other than post
+-load more comments dynamically
 
 +Tags
 -add tags to posts
@@ -47,16 +53,10 @@ todo
 -filters
 
 +Posts
--video
 -comments
--link to profile
+-video (mime types if statement, research ffmpeg package or other)
 -validation: The satisfies Operator
 -moderation (approval? run images through site? run text through site? localai?)
-
-+media
--add video uploading (mime types if statement)
--look up ffmpeg
--implement ffmpeg
 
 +Settings
 -theme
