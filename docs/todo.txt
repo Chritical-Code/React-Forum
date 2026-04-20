@@ -3,7 +3,7 @@ Nows
 --------------------
 
 +comments
--links to user
+-show profile pic?
 -commenting reloads comment state
 
 --------------------
