@@ -3,7 +3,6 @@ Nows
 --------------------
 
 +comments
--commenting reloads comment state
 -delete comment button (reloads state)
 
 --------------------
@@ -14,6 +13,7 @@ todo
 -add basic design
 -polish features
 -polish design (look at templates/examples)
+-fill out example data
 -document
 -github
 -portfolio-site

@@ -32,8 +32,7 @@ export default function LikeButton({postId}: LikeButtonProps){
     return(
         <>
             <Form action={async () => {}} onSubmit={handleSubmit}>
-                <button type="submit" 
-                className="mr-1 text-5xl text-center hover:cursor-pointer">
+                <button type="submit" className="mr-1 text-5xl text-center hover:cursor-pointer">
                     <Heart liked={liked}></Heart>
                 </button>
                 <input type="hidden" name="postId" value={postId}></input>
