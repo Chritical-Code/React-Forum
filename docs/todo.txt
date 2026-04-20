@@ -3,8 +3,8 @@ Nows
 --------------------
 
 +comments
--show profile pic?
 -commenting reloads comment state
+-delete comment button (reloads state)
 
 --------------------
 Future
@@ -41,6 +41,7 @@ todo
 -also add validation to forms other than post
 -load more comments dynamically
 -simplifiy some prisma with include: author: true, etc
+-keep spacing in comments? (new lines)
 
 +Tags
 -add tags to posts
