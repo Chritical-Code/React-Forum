@@ -4,6 +4,7 @@ import { addComment } from "@/src/actions/addComment";
 import { getComments } from "@/src/actions/getComments";
 import type { CommentWithAuthor } from "@/src/actions/getComments";
 import { useState, useEffect } from "react";
+import { getOwnsComment } from "../actions/getOwnsComment";
 
 type CommentSectionProps = {
     postId: string,
@@ -28,7 +29,8 @@ export default function CommentSection({postId}: CommentSectionProps){
 
     const comments = commentData.map((comment, index) => {
         return(
-            <CommentComponent key={index} username={comment.author.name} text={comment.text} userId={comment.authorId} pic={comment.author.image}>
+            <CommentComponent key={index} username={comment.author.name} text={comment.text} userId={comment.authorId} 
+            pic={comment.author.image} commentId={comment.id}>
             </CommentComponent>
         );
     });
@@ -55,14 +57,33 @@ type CommentProps = {
     text: string,
     userId: string,
     pic:  string | null,
+    commentId: string,
 }
 
-function CommentComponent({username, text, userId, pic}: CommentProps){
+function CommentComponent({username, text, userId, pic, commentId}: CommentProps){
+    const [showSettings, setShowSettings] = useState(false);
+    
+    async function handleClick(){
+        if(await getOwnsComment({commentId})){
+            setShowSettings(!showSettings);
+        }
+    }
+
+    let deleteButton = (<></>);
+    if(showSettings){
+        deleteButton = (
+            <button className="btn w-8 h-8 m-0 bg-red-700 active:bg-red-800">🗑️</button>
+        );
+    }
+    
     return(
         <div className="flex flex-col w-90 md:w-120 border-b p-1">
             <div className="flex items-center">
                 <img src={pic ?? ""} className="w-8 h-8 mr-2"></img>
                 <a href={"/user/" + userId} className="font-bold hover:text-gray-500">{username}</a>
+                <div className="grow"></div>
+                {deleteButton}
+                <button onClick={() => handleClick()} className="w-8 h-8 shrink-0 ml-2 hover:text-gray-500 hover:cursor-pointer">:</button>
             </div>
 
             <div className="grow">

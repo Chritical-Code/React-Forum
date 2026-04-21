@@ -4,6 +4,8 @@ Nows
 
 +comments
 -delete comment button (reloads state)
+ .delete button deletes it
+-accurate number of comments
 
 --------------------
 Future
@@ -16,8 +18,8 @@ todo
 -fill out example data
 -document
 -github
--portfolio-site
--resume
+-portfolio-site?
+-resume (add forum, add nextjs, react, TS)
 
 +misc
 -confirm delete image
@@ -42,6 +44,8 @@ todo
 -load more comments dynamically
 -simplifiy some prisma with include: author: true, etc
 -keep spacing in comments? (new lines)
+-server actions dont need to be forms. simplify like button, check for others.
+-fix several instances of using authorid: session?.user.id to authroize, by wrapping it in String()
 
 +Tags
 -add tags to posts

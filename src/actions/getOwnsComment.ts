@@ -3,19 +3,20 @@ import {prisma} from "@/prisma/prisma";
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 
-type GetLikedProps = {
-    postId: string,
+type GetOwnsCommentProps = {
+    commentId: string,
 }
 
-export async function getLiked({postId}: GetLikedProps){
+export async function getOwnsComment({commentId}: GetOwnsCommentProps){
     const session = await getServerSession(authOptions);
     const userId = String(session?.user.id);
 
-    const liked = await prisma.postLike.findFirst({
-        where: {authorId: userId, postId: postId}
+    const comment = await prisma.comment.findFirst({
+        where: {id: commentId, authorId: userId}
     });
 
-    if(liked){
+    if(comment){
+        console.log(comment);
         return true;
     }
     else{
