@@ -3,8 +3,6 @@ Nows
 --------------------
 
 +comments
--delete comment button (reloads state)
- .delete button deletes it
 -accurate number of comments
 
 --------------------

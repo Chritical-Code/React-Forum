@@ -4,7 +4,8 @@ import { addComment } from "@/src/actions/addComment";
 import { getComments } from "@/src/actions/getComments";
 import type { CommentWithAuthor } from "@/src/actions/getComments";
 import { useState, useEffect } from "react";
-import { getOwnsComment } from "../actions/getOwnsComment";
+import { getOwnsComment } from "@/src/actions/getOwnsComment";
+import { deleteComment } from "@/src/actions/deleteComment";
 
 type CommentSectionProps = {
     postId: string,
@@ -27,10 +28,10 @@ export default function CommentSection({postId}: CommentSectionProps){
         reloadComments();
     }
 
-    const comments = commentData.map((comment, index) => {
+    const comments = commentData.map((comment) => {
         return(
-            <CommentComponent key={index} username={comment.author.name} text={comment.text} userId={comment.authorId} 
-            pic={comment.author.image} commentId={comment.id}>
+            <CommentComponent key={comment.id} username={comment.author.name} text={comment.text} userId={comment.authorId} 
+            pic={comment.author.image} commentId={comment.id} reloadComments={reloadComments}>
             </CommentComponent>
         );
     });
@@ -58,21 +59,28 @@ type CommentProps = {
     userId: string,
     pic:  string | null,
     commentId: string,
+    reloadComments: Function,
 }
 
-function CommentComponent({username, text, userId, pic, commentId}: CommentProps){
+function CommentComponent({username, text, userId, pic, commentId, reloadComments}: CommentProps){
     const [showSettings, setShowSettings] = useState(false);
     
-    async function handleClick(){
+    async function handleClickSettings(){
         if(await getOwnsComment({commentId})){
             setShowSettings(!showSettings);
         }
     }
 
+    async function handleClickDelete(){
+        deleteComment({commentId});
+        reloadComments();
+    }
+
     let deleteButton = (<></>);
     if(showSettings){
         deleteButton = (
-            <button className="btn w-8 h-8 m-0 bg-red-700 active:bg-red-800">🗑️</button>
+            <button onClick={() => handleClickDelete()}
+            className="btn w-8 h-8 m-0 bg-red-700 active:bg-red-800">🗑️</button>
         );
     }
     
@@ -83,7 +91,7 @@ function CommentComponent({username, text, userId, pic, commentId}: CommentProps
                 <a href={"/user/" + userId} className="font-bold hover:text-gray-500">{username}</a>
                 <div className="grow"></div>
                 {deleteButton}
-                <button onClick={() => handleClick()} className="w-8 h-8 shrink-0 ml-2 hover:text-gray-500 hover:cursor-pointer">:</button>
+                <button onClick={() => handleClickSettings()} className="w-8 h-8 shrink-0 ml-2 hover:text-gray-500 hover:cursor-pointer">:</button>
             </div>
 
             <div className="grow">

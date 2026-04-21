@@ -16,7 +16,6 @@ export async function getOwnsComment({commentId}: GetOwnsCommentProps){
     });
 
     if(comment){
-        console.log(comment);
         return true;
     }
     else{
