@@ -6,9 +6,9 @@ type GetNumLikesProps = {
 }
 
 export async function getNumLikes({postId}: GetNumLikesProps){
-    const liked = await prisma.postLike.count({
+    const likes = await prisma.postLike.count({
         where: {postId: postId}
     });
 
-    return liked;
+    return likes;
 }

@@ -45,12 +45,6 @@ export default async function ViewPost({params}: ViewPostProps){
                 <p className="text-left w-full mt-2">{post?.text}</p>
             </div>
 
-            <div className="flex flex-row items-center h-12 w-94 md:w-124 p-2 mt-8 shrink-0 border-t border-b">
-                <p>Comments - 50</p>
-                <div className="flex grow"></div>
-                <LikeButton postId={resolved.postId}></LikeButton>
-            </div>
-
             <CommentSection postId={resolved.postId}></CommentSection>
         </>
     );

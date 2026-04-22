@@ -6,6 +6,8 @@ import type { CommentWithAuthor } from "@/src/actions/getComments";
 import { useState, useEffect } from "react";
 import { getOwnsComment } from "@/src/actions/getOwnsComment";
 import { deleteComment } from "@/src/actions/deleteComment";
+import { getNumComments } from "@/src/actions/getNumComments";
+import LikeButton from "@/src/components/LikeButton";
 
 type CommentSectionProps = {
     postId: string,
@@ -13,6 +15,7 @@ type CommentSectionProps = {
 
 export default function CommentSection({postId}: CommentSectionProps){
     const [commentData, setCommentData] = useState<CommentWithAuthor[]>([]);
+    const [numComments, setNumComments] = useState<number>(0);
 
     useEffect(() => {
         reloadComments();
@@ -20,6 +23,7 @@ export default function CommentSection({postId}: CommentSectionProps){
 
     async function reloadComments(){
         setCommentData(await getComments({postId}));
+        setNumComments(await getNumComments({postId}));
     }
 
     async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>){
@@ -38,6 +42,12 @@ export default function CommentSection({postId}: CommentSectionProps){
     
     return(
         <>
+            <div className="flex flex-row items-center h-12 w-94 md:w-124 p-2 mt-8 shrink-0 border-t border-b">
+                <p>Comments - {numComments}</p>
+                <div className="flex grow"></div>
+                <LikeButton postId={postId}></LikeButton>
+            </div>
+
             <Form action={async () => {}} onSubmit={handleSubmit} className="flex items-center w-94 md:w-124 p-2 border-b">
                 <div className="grow">
                     <textarea name="text" className="border w-full"></textarea>

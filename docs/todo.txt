@@ -2,8 +2,6 @@
 Nows
 --------------------
 
-+comments
--accurate number of comments
 
 --------------------
 Future
