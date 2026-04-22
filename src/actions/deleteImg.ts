@@ -1,4 +1,4 @@
-'use server'
+'use server';
 import { promises as fs } from "fs";
 import path from "path";
 import {prisma} from "@/prisma/prisma";
@@ -18,18 +18,14 @@ export async function deleteImg(formData: FormData){
     });
 
     if(post?.authorId == session?.user.id){
-        try{
-            await prisma.postImage.delete({
-                where: {id: imageId}
-            });
+        await prisma.postImage.delete({
+            where: {id: imageId}
+        });
 
-            //delete file
-            const path2 = image?.src ?? "/dontnameanythingthis";
-            const filePath = path.join(process.cwd(), "public", path2);
-            await fs.unlink(filePath);
-            
-        }
-        catch{}
-        
+        //delete file
+        const path2 = image?.src ?? "/dontnameanythingthis";
+        const filePath = path.join(process.cwd(), "public", path2);
+        await fs.unlink(filePath);
+    
     }
 }

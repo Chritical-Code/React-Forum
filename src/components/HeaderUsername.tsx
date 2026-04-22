@@ -1,6 +1,5 @@
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
-import {prisma} from "@/prisma/prisma";
 
 export default async function HeaderUsername(){
     const session = await getServerSession(authOptions);

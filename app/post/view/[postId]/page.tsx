@@ -1,8 +1,8 @@
 import {prisma} from "@/prisma/prisma";
 import MyImg from "@/src/components/MyImg";
 import ImageScroller from "@/src/components/ImageScroller";
-import LikeButton from "@/src/components/LikeButton";
 import CommentSection from "@/src/components/CommentSection";
+import { notFound } from "next/navigation";
 
 type ViewPostProps = {
     params: Promise<{
@@ -12,14 +12,18 @@ type ViewPostProps = {
 
 export default async function ViewPost({params}: ViewPostProps){
     const resolved = await params;
+    let post, user;
 
-    const post = await prisma.post.findUnique({
-        where: {id: resolved.postId}
-    });
+    try{
+        post = await prisma.post.findUnique({
+            where: {id: resolved.postId}
+        });
 
-    const user = await prisma.user.findUnique({
-        where: {id: post?.authorId}
-    });
+        user = await prisma.user.findUnique({
+            where: {id: post?.authorId}
+        });
+    }
+    catch{notFound();}
 
     const imageData = await prisma.postImage.findMany({
         where: {postId: resolved.postId}

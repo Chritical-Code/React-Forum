@@ -10,10 +10,7 @@ type DeleteCommentProps = {
 export async function deleteComment({commentId}: DeleteCommentProps){
     const session = await getServerSession(authOptions);
 
-    try{
-        await prisma.comment.delete({
-            where: {id: commentId, authorId: String(session?.user.id)}
-        });
-    }
-    catch{}
+    await prisma.comment.delete({
+        where: {id: commentId, authorId: String(session?.user.id)}
+    });
 }

@@ -5,6 +5,7 @@ import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import {prisma} from "@/prisma/prisma";
 import {deletePost} from "@/src/actions/deletePost";
 import ImageManager from "@/src/components/ImageManager";
+import { notFound } from "next/navigation";
 
 type EditPostProps = {
     params: Promise<{
@@ -20,29 +21,22 @@ export default async function EditPost({params}: EditPostProps){
         where: {AND: {authorId: session?.user.id, id: resolved.postId}}
     });
  
-    if(post){
-        return(
-            <>
-                <h2 className="font-bold">Edit Post</h2>
+    if(!post){notFound();}
+    
+    return(
+        <>
+            <h2 className="font-bold">Edit Post</h2>
 
-                <ImageManager postId={post.id}></ImageManager>
+            <ImageManager postId={post.id}></ImageManager>
 
-                <PostForm inTitle={post.title} inText={post.text} postID={resolved.postId} />
+            <PostForm inTitle={post.title} inText={post.text} postID={resolved.postId} />
 
-                <Form action={deletePost}>
-                    <input type="hidden" name="postId" value={resolved.postId}></input>
-                    <button type="submit" className="btn bg-red-700">Delete</button>
-                </Form>
-            </>
-        );
-    }
-    else{
-        return(
-            <div>
-                <p>Invalid post or permissions.</p>
-            </div>
-        );
-    }
+            <Form action={deletePost}>
+                <input type="hidden" name="postId" value={resolved.postId}></input>
+                <button type="submit" className="btn bg-red-700">Delete</button>
+            </Form>
+        </>
+    );
 }
 
 type PostFormProps = {

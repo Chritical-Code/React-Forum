@@ -2,6 +2,14 @@
 Nows
 --------------------
 
++not found
+-implement not found where applicable
+-add try-catches where needed, remove where arbitrary
+-verify i didnt just destroy everything's functionality
+
++search bar
+-search for text inside post titles and bodies
+-look up how to do search queries
 
 --------------------
 Future
@@ -20,7 +28,6 @@ todo
 +misc
 -confirm delete image
 -confirm delete post
--add try-catches where needed
 -image cropper
 -make post text preserve new lines
 -username cuts off on mobile, maybe just say profile. or combine settings and profile into a popup.
@@ -42,6 +49,7 @@ todo
 -keep spacing in comments? (new lines)
 -server actions dont need to be forms. simplify like button, check for others.
 -fix several instances of using authorid: session?.user.id to authroize, by wrapping it in String()
+-test if likes list works on other accounts
 
 +Tags
 -add tags to posts
@@ -55,10 +63,9 @@ todo
 -filters
 
 +Posts
--comments
 -video (mime types if statement, research ffmpeg package or other)
 -validation: The satisfies Operator
 -moderation (approval? run images through site? run text through site? localai?)
 
 +Settings
--theme
+-themes?

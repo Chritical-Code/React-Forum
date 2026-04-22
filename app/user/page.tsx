@@ -44,7 +44,7 @@ export default async function DashboardPage() {
 
             <div className="flex flex-col items-center w-94 md:w-124 border-t">
                 <div className="flex items-center w-full border-b pt-1 pb-1">
-                    <h2 className="font-bold">Manage Posts</h2>
+                    <h2 className="font-bold ml-1">Manage Posts</h2>
 
                     <div className="grow"></div>
 

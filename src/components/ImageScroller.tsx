@@ -1,5 +1,4 @@
 'use client';
-
 import { useRef } from "react";
 
 export default function ImageScroller({children}: Readonly<{children: React.ReactNode;}>){

@@ -1,6 +1,7 @@
 import {prisma} from "@/prisma/prisma";
 import PostBox from "@/src/components/PostBox";
 import { Post } from "@/src/generated/prisma/client";
+import { notFound } from "next/navigation";
 
 type UserProps = {
     params: Promise<{
@@ -15,7 +16,7 @@ export default async function User({params}: UserProps){
         where: {OR: [{id: resolved.userId}, {name: {contains: resolved.userId, mode: "insensitive"}}]}
     });
 
-    if(!user){return(<p>User not found.</p>);}
+    if(!user){notFound();}
     
     const posts = await prisma.post.findMany({
         where: {authorId: user?.id}

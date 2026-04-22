@@ -6,6 +6,8 @@ import PostBox from "@/src/components/PostBox";
 
 export default async function LikesPage(){
     const session = await getServerSession(authOptions);
+
+    if(!session){return(<h2 className="font-bold">Login Requried</h2>);}
     
     const posts = await prisma.post.findMany({
         where: {

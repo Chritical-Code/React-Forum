@@ -1,5 +1,4 @@
 'use client';
-
 import Form from "next/form";
 import { likePost } from "@/src/actions/likePost";
 import { useState, useEffect } from "react";
