@@ -2,11 +2,6 @@
 Nows
 --------------------
 
-+not found
--implement not found where applicable
--add try-catches where needed, remove where arbitrary
--verify i didnt just destroy everything's functionality
-
 +search bar
 -search for text inside post titles and bodies
 -look up how to do search queries
@@ -50,6 +45,7 @@ todo
 -server actions dont need to be forms. simplify like button, check for others.
 -fix several instances of using authorid: session?.user.id to authroize, by wrapping it in String()
 -test if likes list works on other accounts
+-only use Form with server actions, otherwise use form
 
 +Tags
 -add tags to posts

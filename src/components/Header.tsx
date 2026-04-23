@@ -1,5 +1,6 @@
 import HeaderButton from "./HeaderButton";
 import HeaderUsername from "./HeaderUsername";
+import SearchBar from "./SearchBar";
 
 export default function Header(){
     return(
@@ -10,9 +11,7 @@ export default function Header(){
                 </a>
             </div>
 
-            <div className="flex w-2/4 justify-center items-center h-full">
-                <input placeholder="🔍Search" type="text" className="m-1 w-40 md:w-100 bg-white border rounded-lg pl-2 pr-2 h-6/10"></input>
-            </div>
+            <SearchBar></SearchBar>
 
             <div className="flex items-center justify-end w-1/4">
                 <HeaderUsername />
