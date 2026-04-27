@@ -11,7 +11,7 @@ export default async function Home() {
 
     const postBoxes = posts.map((post: Post, index) => {
         return(
-            <PostBox key={index} post={post} viewOrEdit="view"></PostBox>
+            <PostBox key={post.id} post={post} viewOrEdit="view"></PostBox>
         );
     });
 

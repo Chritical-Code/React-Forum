@@ -8,7 +8,9 @@ export default function SearchBar(){
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const searchString = formData.get("search") as string;
-        router.push(`/search?q=${encodeURIComponent(searchString)}`);
+        if(searchString != ""){
+            router.push(`/search?q=${encodeURIComponent(searchString)}`);
+        }
     }
 
     return(
