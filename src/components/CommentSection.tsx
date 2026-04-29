@@ -97,7 +97,7 @@ function CommentComponent({username, text, userId, pic, commentId, reloadComment
     return(
         <div className="flex flex-col w-90 md:w-120 border-b p-1">
             <div className="flex items-center">
-                <img src={pic ?? ""} className="w-8 h-8 mr-2"></img>
+                <img src={pic ?? "null"} className="w-8 h-8 mr-2"></img>
                 <a href={"/user/" + userId} className="font-bold hover:text-gray-500">{username}</a>
                 <div className="grow"></div>
                 {deleteButton}

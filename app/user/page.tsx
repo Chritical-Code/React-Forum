@@ -29,7 +29,7 @@ export default async function DashboardPage() {
     return (
         <>
             <h1 className="font-bold m-1">Profile</h1>
-            <img className="w-20 h-20 m-1" src={user?.image ?? ""}></img>
+            <img className="w-20 h-20 m-1" src={user?.image ?? "null"}></img>
             <a href={"/user/" + user?.id} className="">{session?.user?.name}</a>
             <p className="">{session?.user?.email}</p>
             <a className="btn m-2" href="/api/auth/signout">

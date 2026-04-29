@@ -48,8 +48,9 @@ export default async function SeedPage(){
                     <label>Text:</label>
                     <textarea name="text" className="border m-2"></textarea>
                 </div>
-                <div className="flex items-center">
-                    <input type="file" id="file-upload" name="file" accept="image/*" className=""></input>
+                <div className="flex items-center justify-center w-90 md:w-120">
+                    <label>Image: </label>
+                    <input type="file" id="file-upload" name="file" accept="image/*" className="text-center border w-60 overflow-hidden m-2"></input>
                 </div>
                 <button type="submit" className="btn">Create</button>
             </Form>

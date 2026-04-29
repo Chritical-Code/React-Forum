@@ -30,7 +30,7 @@ export default async function User({params}: UserProps){
     
     return(
         <>
-            <img className="w-20 h-20 m-1" src={user?.image ?? ""}></img>
+            <img className="w-20 h-20 m-1" src={user?.image ?? "null"}></img>
             <p>Username: {user?.name}</p>
             <p>Email: {user?.email}</p>
 

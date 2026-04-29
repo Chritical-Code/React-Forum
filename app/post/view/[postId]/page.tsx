@@ -38,9 +38,9 @@ export default async function ViewPost({params}: ViewPostProps){
     return(
         <>
             <div className="flex flex-col items-center mt-2 w-90 md:w-120">
-                <p className="font-bold text-center mb-2">{post?.title}</p>
+                <a href={"/user/" + user?.id} className="hover:text-gray-600 mb-1">{user?.name}</a>
 
-                <a href={"/user/" + user?.id} className="hover:text-gray-600">{user?.name}</a>
+                <p className="font-bold text-center mb-1">{post?.title}</p>
 
                 {(images.length > 0) && <ImageScroller>
                     {images}

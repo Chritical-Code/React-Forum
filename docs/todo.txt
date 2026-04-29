@@ -2,6 +2,8 @@
 Nows
 --------------------
 
++seed some datae
+
 +load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
 
 --------------------
@@ -19,6 +21,7 @@ todo
 -resume (add forum, add nextjs, react, TS)
 
 +misc
+-hide seeding pages
 -confirm delete image
 -confirm delete post
 -image cropper
