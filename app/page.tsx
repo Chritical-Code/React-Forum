@@ -1,6 +1,5 @@
 import {prisma} from "@/prisma/prisma";
 import PostBox from "@/src/components/PostBox";
-import { Post } from "@/src/generated/prisma/client";
 
 export default async function Home() {
     const posts = await prisma.post.findMany({
@@ -9,7 +8,7 @@ export default async function Home() {
         }
     });
 
-    const postBoxes = posts.map((post: Post, index) => {
+    const postBoxes = posts.map((post) => {
         return(
             <PostBox key={post.id} post={post} viewOrEdit="view"></PostBox>
         );
