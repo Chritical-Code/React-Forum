@@ -2,10 +2,6 @@
 Nows
 --------------------
 
-+filler data
--custom seed page
-.left off mapping all users to select options, might need to do fancy typing trick
-
 +load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
 
 --------------------
