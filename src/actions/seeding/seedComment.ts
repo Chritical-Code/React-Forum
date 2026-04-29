@@ -5,5 +5,15 @@ import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 
 export async function seedComment(formData: FormData){
     const session = await getServerSession(authOptions);
-    const title = String(formData.get("title"));
+    const userId = String(formData.get("userId"));
+    const postId = String(formData.get("postId"));
+    const text = String(formData.get("text"));
+
+    const newComment = await prisma.comment.create({
+        data: {
+            authorId: userId,
+            postId: postId,
+            text: text
+        }
+    });
 }

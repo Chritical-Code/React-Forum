@@ -1,5 +1,4 @@
-'use server'
-
+'use server';
 import {prisma} from "@/prisma/prisma";
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
@@ -13,7 +12,7 @@ export async function uploadMedia(formData: FormData){
     const postId = String(formData.get("postId") ?? "");
 
     //get image buffer
-    const file = formData.get("image") as File;
+    const file = formData.get("file") as File;
     const bytes = await file.arrayBuffer(); 
     const buffer = Buffer.from(bytes);
     

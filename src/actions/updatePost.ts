@@ -2,7 +2,7 @@
 import {prisma} from "@/prisma/prisma";
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
-import { redirect } from 'next/navigation'
+import { redirect } from 'next/navigation';
 
 export async function updatePost(formData: FormData){
     const session = await getServerSession(authOptions);
