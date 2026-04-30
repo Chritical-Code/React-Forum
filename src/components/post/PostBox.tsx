@@ -1,6 +1,6 @@
 import { Post } from "@/src/generated/prisma/client";
 import {prisma} from "@/prisma/prisma";
-import MyImg from "@/src/components/MyImg";
+import MyImg from "@/src/components/image/MyImg";
 
 type PostBoxProps = {
     post: Post,

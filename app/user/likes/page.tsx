@@ -2,7 +2,7 @@ import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import {prisma} from "@/prisma/prisma";
 import { Post } from "@/src/generated/prisma/client";
-import PostBox from "@/src/components/PostBox";
+import PostBox from "@/src/components/post/PostBox";
 
 export default async function LikesPage(){
     const session = await getServerSession(authOptions);

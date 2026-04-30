@@ -2,7 +2,7 @@
 import {prisma} from "@/prisma/prisma";
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
-import { uploadMedia } from "../uploadMedia";
+import { uploadMedia } from "../image/uploadMedia";
 import { redirect } from 'next/navigation';
 
 export async function seedPost(formData: FormData){

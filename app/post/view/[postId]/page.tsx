@@ -1,7 +1,7 @@
 import {prisma} from "@/prisma/prisma";
-import MyImg from "@/src/components/MyImg";
-import ImageScroller from "@/src/components/ImageScroller";
-import CommentSection from "@/src/components/CommentSection";
+import MyImg from "@/src/components/image/MyImg";
+import ImageScroller from "@/src/components/image/ImageScroller";
+import CommentSection from "@/src/components/post/CommentSection";
 import { notFound } from "next/navigation";
 
 type ViewPostProps = {

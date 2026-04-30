@@ -1,5 +1,5 @@
 import {prisma} from "@/prisma/prisma";
-import PostBox from "@/src/components/PostBox";
+import PostBox from "@/src/components/post/PostBox";
 import { Post } from "@/src/generated/prisma/client";
 
 type SearchPageProps = {

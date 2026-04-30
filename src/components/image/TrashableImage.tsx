@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { PostImage } from "../generated/prisma/client";
 import Form from "next/form";
-import {deleteImg} from "@/src/actions/deleteImg";
+import {deleteImg} from "@/src/actions/image/deleteImg";
 
 type MyImgProps = {
     image: PostImage,

@@ -1,9 +1,9 @@
 'use client';
 import Form from "next/form";
-import { likePost } from "@/src/actions/likePost";
+import { likePost } from "@/src/actions/like/likePost";
 import { useState, useEffect } from "react";
-import { getLiked } from "@/src/actions/getLiked";
-import { getNumLikes } from "@/src/actions/getNumLikes";
+import { getLiked } from "@/src/actions/like/getLiked";
+import { getNumLikes } from "@/src/actions/like/getNumLikes";
 
 type LikeButtonProps = {
     postId: string,

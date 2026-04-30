@@ -1,10 +1,10 @@
-import {updatePost} from "@/src/actions/updatePost";
+import {updatePost} from "@/src/actions/post/updatePost";
 import Form from 'next/form'
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import {prisma} from "@/prisma/prisma";
-import {deletePost} from "@/src/actions/deletePost";
-import ImageManager from "@/src/components/ImageManager";
+import {deletePost} from "@/src/actions/post/deletePost";
+import ImageManager from "@/src/components/image/ImageManager";
 import { notFound } from "next/navigation";
 
 type EditPostProps = {

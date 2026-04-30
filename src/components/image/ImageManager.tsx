@@ -1,9 +1,9 @@
 'use client';
 import Form from 'next/form'
-import { uploadMedia } from "@/src/actions/uploadMedia";
-import TrashableImage from "@/src/components/TrashableImage";
+import { uploadMedia } from "@/src/actions/image/uploadMedia";
+import TrashableImage from "@/src/components/image/TrashableImage";
 import { PostImage } from "@/src/generated/prisma/client";
-import {getImageData} from "@/src/actions/getImageData";
+import {getImageData} from "@/src/actions/image/getImageData";
 import { useEffect, useState, useRef } from 'react';
 import ImageScroller from "./ImageScroller";
 

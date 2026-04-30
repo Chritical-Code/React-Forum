@@ -1,5 +1,5 @@
-import Header from "@/src/components/Header";
-import "./globals.css";
+import Header from "@/src/components/header/Header";
+import "@/app/globals.css";
 import AuthWrapper from "@/src/components/AuthWrapper";
 import type { Metadata } from "next";
 

@@ -2,7 +2,7 @@
 Nows
 --------------------
 
-+seed some datae
++organize src
 
 +load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
 

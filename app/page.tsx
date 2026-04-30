@@ -1,5 +1,5 @@
 import {prisma} from "@/prisma/prisma";
-import PostBox from "@/src/components/PostBox";
+import PostBox from "@/src/components/post/PostBox";
 
 export default async function Home() {
     const posts = await prisma.post.findMany({

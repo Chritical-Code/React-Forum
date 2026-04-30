@@ -1,6 +1,6 @@
-import HeaderButton from "./HeaderButton";
-import HeaderUsername from "./HeaderUsername";
-import SearchBar from "./SearchBar";
+import HeaderButton from "@/src/components/header/HeaderButton";
+import HeaderUsername from "@/src/components/header/HeaderUsername";
+import SearchBar from "@/src/components/header/SearchBar";
 
 export default function Header(){
     return(

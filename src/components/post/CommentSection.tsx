@@ -1,13 +1,13 @@
 'use client';
 import Form from "next/form";
-import { addComment } from "@/src/actions/addComment";
-import { getComments } from "@/src/actions/getComments";
-import type { CommentWithAuthor } from "@/src/actions/getComments";
+import { addComment } from "@/src/actions/comment/addComment";
+import { getComments } from "@/src/actions/comment/getComments";
+import type { CommentWithAuthor } from "@/src/actions/comment/getComments";
 import { useState, useEffect } from "react";
-import { getOwnsComment } from "@/src/actions/getOwnsComment";
-import { deleteComment } from "@/src/actions/deleteComment";
-import { getNumComments } from "@/src/actions/getNumComments";
-import LikeButton from "@/src/components/LikeButton";
+import { getOwnsComment } from "@/src/actions/comment/getOwnsComment";
+import { deleteComment } from "@/src/actions/comment/deleteComment";
+import { getNumComments } from "@/src/actions/comment/getNumComments";
+import LikeButton from "@/src/components/post/LikeButton";
 
 type CommentSectionProps = {
     postId: string,

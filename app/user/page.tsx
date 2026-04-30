@@ -3,8 +3,8 @@ import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 import {prisma} from "@/prisma/prisma";
 import { Post } from "@/src/generated/prisma/client";
 import Form from 'next/form'
-import {newPost} from "@/src/actions/newPost";
-import PostBox from "@/src/components/PostBox";
+import {newPost} from "@/src/actions/post/newPost";
+import PostBox from "@/src/components/post/PostBox";
 
 export default async function DashboardPage() {
     const session = await getServerSession(authOptions);
