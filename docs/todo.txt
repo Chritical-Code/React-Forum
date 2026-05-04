@@ -2,8 +2,6 @@
 Nows
 --------------------
 
-+organize src
-
 +load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
 
 --------------------
@@ -30,7 +28,6 @@ todo
 -click image to open bigger
 -phone browser gets stuck scrolled up and cant be fixed
 -improve scrolling (add swipe scrolling. add image count indicator.)
--organize components folder
 -post image order
 -post order
 -part of image is getting cut off
