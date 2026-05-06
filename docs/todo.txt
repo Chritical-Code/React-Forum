@@ -2,6 +2,8 @@
 Nows
 --------------------
 
++hey we cant insert a server component into a client component
+
 +load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
 
 --------------------

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { PostImage } from "../generated/prisma/client";
+import { PostImage } from "@/src/generated/prisma/client";
 
 type MyImgProps = {
     image: PostImage,

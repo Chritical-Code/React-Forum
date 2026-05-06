@@ -11,12 +11,13 @@ export default async function DashboardPage() {
     if(!session){return(<p>Must be logged in.</p>);}
 
     const posts = await prisma.post.findMany({
-        where: {authorId: session?.user.id}
+        where: {authorId: session?.user.id},
+        include: {postImages: {take: 1}}
     });
 
-    const postBoxes = posts.map((post: Post, index) => {
+    const postBoxes = posts.map((post) => {
         return(
-            <PostBox key={index} post={post} viewOrEdit="edit"></PostBox>
+            <PostBox key={post.id} post={post} viewOrEdit="edit"></PostBox>
         );
     });
     
