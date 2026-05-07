@@ -1,6 +1,5 @@
 import {prisma} from "@/prisma/prisma";
 import PostBox from "@/src/components/post/PostBox";
-import { Post } from "@/src/generated/prisma/client";
 import { notFound } from "next/navigation";
 
 type UserProps = {
@@ -19,12 +18,13 @@ export default async function User({params}: UserProps){
     if(!user){notFound();}
     
     const posts = await prisma.post.findMany({
-        where: {authorId: user?.id}
+        where: {authorId: user?.id},
+        include: {postImages: {take: 1}}
     });
     
-    const postBoxes = posts.map((post: Post, index) => {
+    const postBoxes = posts.map((post) => {
         return(
-            <PostBox key={index} post={post} viewOrEdit="view"></PostBox>
+            <PostBox key={post.id} post={post} viewOrEdit="view"></PostBox>
         );
     });
     

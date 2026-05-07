@@ -49,7 +49,6 @@ export default function PostBrowser(){
     return(
         <>
             <div ref={boxRef} onScroll={() => handleScroll()} className="flex flex-col items-center h-screen overflow-y-scroll w-full -mb-2">
-                <h1 className="font-bold">Posts</h1>
                 {postBoxes}
                 <div className="w-full h-2 shrink-0"></div>
             </div>
