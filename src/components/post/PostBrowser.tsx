@@ -7,10 +7,18 @@ import { getPosts } from "@/src/actions/post/getPosts";
 export default function PostBrowser(){
     const [postData, setPostData] = useState<Post[]>([]);
     const cursor = useRef("");
+    const boxRef = useRef<HTMLDivElement | null>(null);
+    const dontScroll = useRef(false);
 
     useEffect(() => {
         loadPosts();
     }, []);
+
+    const postBoxes = postData.map((post, index) => {
+        return(
+            <PostBox key={post.id + index} post={post} viewOrEdit="view"></PostBox>
+        );
+    });
 
     async function loadPosts(){
         const newPosts = await getPosts(cursor.current);
@@ -21,21 +29,30 @@ export default function PostBrowser(){
         }
     }
 
-    const postBoxes = postData.map((post, index) => {
-        return(
-            <PostBox key={post.id + index} post={post} viewOrEdit="view"></PostBox>
-        );
-    });
+    //infinite scroll
+    async function handleScroll() {
+        if(dontScroll.current){return;}
 
-    async function handleLoadButton(){
-        loadPosts();
-    }
+        const postsDiv = boxRef.current;
+        if (!postsDiv) return;
+
+        const isBottom =
+        postsDiv.scrollTop + postsDiv.clientHeight >= postsDiv.scrollHeight - 100;
+
+        if (isBottom) {
+            dontScroll.current = true;
+            await loadPosts();
+            dontScroll.current = false;
+        }
+    };
     
     return(
         <>
-            <p>post browser</p>
-            {postBoxes}
-            <button onClick={() => handleLoadButton()} className="btn">Load</button>
+            <div ref={boxRef} onScroll={() => handleScroll()} className="flex flex-col items-center h-screen overflow-y-scroll w-full -mb-2">
+                <h1 className="font-bold">Posts</h1>
+                {postBoxes}
+                <div className="w-full h-2 shrink-0"></div>
+            </div>
         </>
     );
 }

@@ -1,7 +1,8 @@
 --------------------
 Nows
 --------------------
-+load posts on scroll rather than on button press
+
+
 
 --------------------
 Future
@@ -51,7 +52,6 @@ todo
 -figure out how tag ading wokrs in general
 
 +Browse
--load more posts dynamically (prisma skip take cursor statements for getting next 10 entries)
 -algorithm
 
 +Posts
