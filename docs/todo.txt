@@ -2,7 +2,7 @@
 Nows
 --------------------
 
-
++tags
 
 --------------------
 Future
@@ -50,6 +50,8 @@ todo
 -filter by tags
 -blacklist tags
 -figure out how tag ading wokrs in general
+-tag upvotes/downvotes
+-user tag stats
 
 +Browse
 -algorithm
