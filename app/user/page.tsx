@@ -40,7 +40,6 @@ export default async function DashboardPage() {
             <div className="flex items-center w-94 md:w-124 mt-1 mb-1">
                 <a href="/user/likes" className="btn">Likes</a>
                 <div className="grow"></div>
-                <a className="btn">Favorites</a>
             </div>
 
             <div className="flex flex-col items-center w-94 md:w-124 border-t">

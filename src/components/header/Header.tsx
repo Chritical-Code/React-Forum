@@ -11,9 +11,8 @@ export default function Header(){
 
             <SearchBar></SearchBar>
 
-            <div className="flex items-center justify-end w-1/4">
+            <div className="flex items-center justify-center md:justify-end w-1/4 mr-2">
                 <HeaderUsername />
-                <HeaderButton link="/" text="⚙" />
             </div>
         </div>
     );

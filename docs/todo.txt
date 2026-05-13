@@ -2,14 +2,18 @@
 Nows
 --------------------
 
-+tags
++polish design
+
++fill out example data
+
++document
+
++resume
 
 --------------------
 Future
 --------------------
 todo
--add basic features
--add basic design
 -polish features
 -polish design (look at templates/examples)
 -fill out example data
@@ -49,7 +53,7 @@ todo
 -add tags to posts
 -filter by tags
 -blacklist tags
--figure out how tag ading wokrs in general
+-figure out how tag adding works
 -tag upvotes/downvotes
 -user tag stats
 
@@ -62,4 +66,5 @@ todo
 -moderation (approval? run images through site? run text through site? localai?)
 
 +Settings
+-combine with profile?
 -themes?
