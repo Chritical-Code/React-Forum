@@ -3,7 +3,10 @@ Nows
 --------------------
 
 +polish design
--
+-header color
+-postbox color
+-favicon
+
 
 +fill out example data
 
@@ -38,7 +41,6 @@ todo
 -part of image is getting cut off
 -do we need to if(session) every login-required page?
 -postbox hitbox is a bit off
--favicon
 -dont allow spaces in usernames?
 -make usernames unique?
 -also add validation to forms other than post

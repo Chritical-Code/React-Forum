@@ -6,7 +6,7 @@ export default async function HeaderUsername(){
 
     if(session){
         return(
-            <Link text={session?.user.name ?? ""} link={"/user"}/>
+            <Link text={"Profile"} link={"/user"}/>
         ); 
     }
     else{
@@ -24,7 +24,7 @@ type LinkProps = {
 function Link({text, link}: LinkProps){
     return(
         <a href={link} className="whitespace-nowrap max-w-24 md:max-w-48 overflow-hidden m-0 hover:text-gray-600 font-bold">
-            {"Profile"}
+            {text}
         </a>
     );
 }
