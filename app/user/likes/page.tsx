@@ -16,10 +16,11 @@ export default async function LikesPage(){
                     authorId: session?.user.id
                 }
             }
-        }
+        },
+        include: {postImages: {take: 1}}
     });
 
-    const postBoxes = posts.map((post: Post, index) => {
+    const postBoxes = posts.map((post, index) => {
             return(
                 <PostBox key={index} post={post} viewOrEdit="view"></PostBox>
             );
