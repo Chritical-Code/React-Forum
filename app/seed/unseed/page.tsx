@@ -44,7 +44,7 @@ export default async function Unseed(){
             <Form action={unseedPost} className="flex flex-col items-center m-2 border w-90 md:w-120">
                 <h2 className="font-bold text-center">Remove Post</h2>
                 <div className="flex items-center">
-                    <label>Username:</label>
+                    <label>Post Title:</label>
                     <select name="postId" className="m-2 border p-1" required>
                         {posts}
                     </select>
@@ -55,7 +55,7 @@ export default async function Unseed(){
             <Form action={unseedComment} className="flex flex-col items-center m-2 border w-90 md:w-120">
                 <h2 className="font-bold text-center">Remove Comment</h2>
                 <div className="flex items-center">
-                    <label>Username:</label>
+                    <label>Comment:</label>
                     <select name="commentId" className="m-2 border p-1 max-w-60 md:max-w-90 overflow-hidden" required>
                         {comments}
                     </select>

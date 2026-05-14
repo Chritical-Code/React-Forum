@@ -3,8 +3,6 @@ Nows
 --------------------
 
 +polish design
--header color
--postbox color
 -favicon
 
 
@@ -51,6 +49,7 @@ todo
 -fix several instances of using authorid: session?.user.id to authroize, by wrapping it in String()
 -test if likes list works on other accounts
 -only use Form with server actions, otherwise use form
+-consider having bigger images on large screens
 
 +Tags
 -add tags to posts

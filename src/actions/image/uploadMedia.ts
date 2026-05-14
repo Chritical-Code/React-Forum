@@ -29,15 +29,21 @@ export async function uploadMedia(formData: FormData){
         }
     });
 
-    //add id to path
-    const filePath = path.join(process.cwd(), ("public/uploads/" + session?.user.id), (newImage.id + ".webp"));
-    await prisma.postImage.update({
-        where: {id: newImage.id},
-        data: {src: ("/uploads/" + session?.user.id + "/" + newImage.id + ".webp")}
+    //get correct user from post
+    const post = await prisma.post.findUnique({
+        where: {id: postId}
     });
 
+    //add id to path
+    const filePath = path.join(process.cwd(), ("public/uploads/" + post?.authorId), (newImage.id + ".webp"));
+    await prisma.postImage.update({
+        where: {id: newImage.id},
+        data: {src: ("/uploads/" + post?.authorId + "/" + newImage.id + ".webp")}
+    });
+
+    
     // Create folder if it doesn't exist
-    const uploadDir = path.join(process.cwd(), "public", "uploads", session?.user.id ?? "oopsie");
+    const uploadDir = path.join(process.cwd(), "public", "uploads", post?.authorId ?? "oopsie");
     await fs.promises.mkdir(uploadDir, { recursive: true });
 
     //save file
