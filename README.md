@@ -28,7 +28,7 @@ Posts load dynamically, allowing more to appear as users scroll down.
 
 ### Post Interaction
 
-Users can comment on posts to share their thoughts. They can also like the posts, which will make it easier to find later.
+Users can comment on posts to share their thoughts. They can also like the posts, which will make them easier to find later.
 
 ![Post likes and comments](/docs/images/post-interaction.webp)
 
