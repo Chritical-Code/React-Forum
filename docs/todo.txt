@@ -1,13 +1,6 @@
 --------------------
 Nows
 --------------------
-
-+polish design
--favicon
-
-
-+fill out example data
-
 +document
 
 +resume
