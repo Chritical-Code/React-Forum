@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Forum
 
-## Getting Started
+### | Overview | [Development](docs/development.md) |
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A forum for topics of various interests. Made in Next.js/React.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Home page](/docs/images/overview.webp)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### OAuth Sign In
 
-## Learn More
+Users can sign in using authentication from trusted platforms like GitHub and Google.
 
-To learn more about Next.js, take a look at the following resources:
+![OAuth sign in page](/docs/images/oauth.webp)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Posts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Users can make posts, which include a title, body, and images. They can edit them later.
 
-## Deploy on Vercel
+![Edit post page](/docs/images/post-editing.webp)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Infinite Scroll
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Posts load dynamically, allowing more to appear as users scroll down.
+
+### Post Interaction
+
+Users can comment on posts to share their thoughts. They can also like the posts, which will make it easier to find later.
+
+![Post likes and comments](/docs/images/post-interaction.webp)
+
+### Search
+
+Users can search for keywords to find posts they are looking for. Future support for search filters and tags is planned.
+
+![Search page](/docs/images/search.webp)
